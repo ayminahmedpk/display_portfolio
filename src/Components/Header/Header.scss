@@ -6,4 +6,19 @@
     height  : 80px;
     
     background-color: #474747;
+
+    a {
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        
+        width: 100%;
+
+        color           : white;
+        text-decoration : none;
+
+        &.active {
+            background-color: #272727;
+        }
+    }
 }
