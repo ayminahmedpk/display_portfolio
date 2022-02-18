@@ -2,21 +2,15 @@
 
 import React from 'react';
 
+import PageLink from '../PageLink/PageLink.js';
+
 import './Header.scss';
 
 
-const Header = ({carouselLinkHandler, getCarouselLinkClasses}) => {
+const Header = () => {
     
     return (
-        <div className="header">
-            <p>Header</p>
-            <button
-                data-carousel__link-target={">"}
-                onClick={carouselLinkHandler}
-            >
-                x
-            </button>
-        </div>
+        <div className="header"> Header </div>
 
     );
 }

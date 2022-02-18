@@ -1,0 +1,23 @@
+
+
+.page-link {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+
+    width  : 100%;
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration : underline;
+    }
+
+    &.carousel__link--active {
+        // background-color : white;
+        // color            : #272727;
+        background-color : #272727;
+        text-decoration  : underline;
+        
+    }
+}
