@@ -26,7 +26,7 @@ Content:
         * Let them see you can communicate clearly and comfortably
 
     CTA:
-        * Just link to Upwork for now
+        * Just link to Upwork for now I guess
 
     Contact:
         * Let them send you an email
