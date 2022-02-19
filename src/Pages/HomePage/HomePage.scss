@@ -8,10 +8,10 @@
     width: 100%;
 
     position : absolute;
-    top      : 40%;
+    top      : 20%;
     left     : 50%;
 
-    transform: translate(-50%, -40%);
+    transform: translateX(-50%);
 
     .name {
         font-size: 72px;
@@ -21,7 +21,7 @@
 
 
 .cta {
-    padding    : 1rem 3rem;
+    padding    : 1em 3em;
     margin-top : 32px;
     border     : none;
     
