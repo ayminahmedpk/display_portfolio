@@ -6,13 +6,14 @@ import Project from '../../Components/Project/Project.js';
 
 import calculatorImg from '../../resources/images/projects/calculator/calculator.jpg';
 import fourCardImg   from '../../resources/images/projects/four-card/four-card.jpg';
+import sot           from '../../resources/images/projects/sot/sot.png';
 
 
 const ProjectsPage = () => {
 
     const projectsData = [
         {
-            id         : 2,
+            id         : 1,
             name       : 'FEM Four-Card Section',
             image      : fourCardImg,
             webLink    : 'https://ayminahmedpk.github.io/display-fem-four_card/',
@@ -21,13 +22,21 @@ const ProjectsPage = () => {
             femLink    : 'https://www.frontendmentor.io/solutions/figma-grid-areas-and-autofit-flex-and-auto-margins-bem-sass-mVn4Kes-9'
         },
         {
-            id         : 1,
+            id         : 2,
             name       : 'FEM Calculator',
             image      : calculatorImg,
             webLink    : 'https://ayminahmedpk.github.io/display-fem-calculator_app/',
             repoLink   : 'https://github.com/ayminahmedpk/display-fem-calculator_app/',
             femProject : true,
             femLink    : 'https://www.frontendmentor.io/solutions/sass-lists-for-themes-local-storage-custom-slider-oop-calculator-4zp1kBWp8'
+        },
+        {
+            id         : 3,
+            name       : 'Stamps Of Time',
+            image      : sot,
+            webLink    : 'https://sot3.netlify.app',
+            repoLink   : 'https://github.com/ayminahmedpk/display_sot',
+            femProject : false,
         },
     ];
 
