@@ -1,33 +1,33 @@
 
 
-.project {
+// .project {
     
-    margin: 0 auto;
+//     margin: 0 auto;
 
-    & + & { margin-top: 96px; }
+//     & + & { margin-top: 96px; }
     
     
-    *:not(:first-child) {
-        display : block;
-        margin  : 16px auto 0;
-    }
+//     *:not(:first-child) {
+//         display : block;
+//         margin  : 16px auto 0;
+//     }
 
-    .project__link {
-        padding : 0.25em 1em;
+//     .project__link {
+//         padding : 0.25em 1em;
 
-        color            : white;
-        text-decoration  : none;
-        text-align       : center;
-        background-color : #474747;
-    }
+//         color            : white;
+//         text-decoration  : none;
+//         text-align       : center;
+//         background-color : #474747;
+//     }
 
-    img {
-        width      : 100%;
-        max-height : 50vw;
+//     img {
+//         width      : 100%;
+//         max-height : 50vw;
         
-        // object-fit      : contain;
-        // object-position : top;
+//         // object-fit      : contain;
+//         // object-position : top;
 
-        object-fit : cover;
-    }
-}
+//         object-fit : cover;
+//     }
+// }

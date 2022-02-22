@@ -14,12 +14,12 @@ import AboutPage    from '../Pages/AboutPage/AboutPage.js'       ;
 import ProjectsPage from '../Pages/ProjectsPage/ProjectsPage.js' ;
 import ContactPage  from '../Pages/ContactPage/ContactPage.js'   ;
 
-import Footer  from '../Components/Footer/Footer.js' ;
+// import Footer  from '../Components/Footer/Footer.js' ;
 import Header  from '../Components/Header/Header.js' ;
 
 
 import './App.scss';
-import '../Pages/Pages.scss';
+// import '../Pages/Pages.scss';
 
 
 const App = () => {

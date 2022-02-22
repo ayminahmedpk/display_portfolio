@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 
 
 
-import './ContactPage.scss';
+// import './ContactPage.scss';
 
 
 const ContactPage = () => {

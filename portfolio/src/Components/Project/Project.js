@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import './Project.scss';
+// import './Project.scss';
 
 
 const Project = ({name, image, webLink, repoLink, femProject, femLink}) => {

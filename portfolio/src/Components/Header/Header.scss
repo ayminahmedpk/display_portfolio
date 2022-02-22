@@ -1,24 +1,26 @@
 
 
-.header {
-    display : flex;
+// .header {
+//     display : flex;
 
-    height  : 80px;
+//     height  : 80px;
     
-    background-color: #474747;
+//     background-color: #474747;
 
-    a {
-        display         : flex;
-        align-items     : center;
-        justify-content : center;
+//     a {
+//         display         : flex;
+//         align-items     : center;
+//         justify-content : center;
         
-        width: 100%;
+//         width: 100%;
+//         max-width: 400px;
 
-        color           : white;
-        text-decoration : none;
+//         color           : white;
+//         text-decoration : none;
 
-        &.active {
-            background-color: #272727;
-        }
-    }
-}
+//         &.active {
+//             background-color: #272727;
+//             color: gold;
+//         }
+//     }
+// }

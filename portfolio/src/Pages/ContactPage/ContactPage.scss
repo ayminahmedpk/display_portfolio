@@ -1,48 +1,48 @@
 
 
-.mail-form {
+// .mail-form {
 
 
-    * {
-        display : block;
+//     * {
+//         display : block;
 
-        margin        : 32px auto ;
-        padding       : 8px       ;
-        width         : 100%      ;
-        max-width     : 60ch      ;
-        border-radius : 10px      ;
+//         margin        : 32px auto ;
+//         padding       : 8px       ;
+//         width         : 100%      ;
+//         max-width     : 60ch      ;
+//         border-radius : 10px      ;
 
-        font-family : inherit ;
-        font-size   : inherit ;
-    }
-
-    
-    input { text-align: center; }
+//         font-family : inherit ;
+//         font-size   : inherit ;
+//     }
 
     
-    textarea { min-height: 6em; }
+//     input { text-align: center; }
+
+    
+//     textarea { min-height: 6em; }
     
 
-    *::placeholder {
-        position : absolute ;
-        top      : 50%      ;
-        left     : 50%      ;
+//     *::placeholder {
+//         position : absolute ;
+//         top      : 50%      ;
+//         left     : 50%      ;
         
-        transform: translate(-50%, -50%);
-    }
+//         transform: translate(-50%, -50%);
+//     }
 
 
-    input:last-child {  // The SEND button
-        padding       : 1em 3em ;
-        margin-top    : 32px    ;
+//     input:last-child {  // The SEND button
+//         padding       : 1em 3em ;
+//         margin-top    : 32px    ;
         
-        border        : none ;
-        border-radius : 0    ;
+//         border        : none ;
+//         border-radius : 0    ;
     
-        background-color : #474747 ;
-        color            : white   ;
+//         background-color : #474747 ;
+//         color            : white   ;
 
-        cursor : pointer ;
-    }
-}
+//         cursor : pointer ;
+//     }
+// }
 

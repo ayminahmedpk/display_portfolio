@@ -1,0 +1,4 @@
+
+
+* Header has icons instead of text for mobile version.
+
