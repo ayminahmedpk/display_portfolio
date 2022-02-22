@@ -13,7 +13,7 @@ const HomePage = () => {
             <div className="main-content">
                 <h1 className='name'> AYMIN AHMED </h1>
                 <div className="occupation">FRONT-END DEVELOPER</div>
-                <button className="cta"><h2>HIRE NOW</h2></button>
+                <a href="#" className="cta"><h2>HIRE NOW</h2></a>
             </div>
             <div className="learn-more">or <Link to='/about'>learn more</Link></div>
         </div>
