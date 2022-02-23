@@ -1,4 +1,4 @@
-// More readable to have all css in one file when breakpoints affect multiple
+// More readable to have all css in one file when breakpoints affect numerous
 // components, and the relationship should be seen clearly.
 
 // Was initially split into each component's own file, hence the
@@ -20,11 +20,13 @@
 
 html {
     height : 100%;
+    min-width: 320px;
     
     background-color : black;
     font-family: Verdana;
     // font-family: sans-serif;
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: 18px;
     
 }
 
@@ -39,16 +41,6 @@ body {
 #root {
     display            : grid;
     grid-template-rows : auto 1fr auto;
-
-    position: relative;
-
-    min-height: 500px;
-    height: 100%;
-
-    // height: 100%;
-
-    color : white;
-    
     grid-template-areas:
                             'h'
                             'c'
@@ -57,14 +49,21 @@ body {
     .header  { grid-area: h ; }
     .content { grid-area: c ; }
     .footer  { grid-area: f ; }
+
+    position: relative;
+
+    min-height : 25em;
+    height     : 100%;
+
+    color : white;
 }
 
 
 .header {
-    display : flex;
-    justify-content: center;
+    display         : flex;
+    justify-content : center;
 
-    height  : 80px;
+    height : 4em;
     
     background-color: #474747;
 
@@ -79,24 +78,56 @@ body {
         text-decoration : none;
 
         &.active {
-            background-color: #272727;
-            color: gold;
+            background-color : #272727;
+            color            : gold;
         }
     }
+
+    a .header__link-icon {
+        height : 2em;
+        width  : 2em;
+        // Whiten
+        filter : grayscale(100%)
+                    invert(100%)
+                    sepia(0%)
+                    saturate(7500%)
+                    hue-rotate(106deg)
+                    brightness(102%)
+                    contrast(95%)
+                ;
+    }
+    a.active .header__link-icon {
+        filter: invert(92%)
+                sepia(14%)
+                saturate(6854%)
+                hue-rotate(356deg)
+                brightness(101%)
+                contrast(106%)
+    }
+
+    &__link-text {
+        display: none;
+    }
+
 }
 
 
 .content {
     background-color : #272727;
-    padding          : 32px;
+    padding          : 1.5em;
+    
+    & > * {
+        max-width : 25em;
+        margin    : 0 auto;
+    }
 
     h2 {
         text-align: center;
     }
 
     p {
-        margin    : 32px auto 0;
-        max-width : 60ch;
+        margin    : 1.5em auto 0;
+        max-width : 50ch;
     }
 
     a {
@@ -113,62 +144,51 @@ body {
     align-items    : center;
 
     width   : 100%;
-    padding : 0 32px;
+    padding : 0 1.5em;
 
     position : absolute;
     top      : 50%;
     left     : 50%;
 
+    text-align: center;
+    
     transform: translate(-50%, -50%);
 
     .name {
-        font-size: 72px;
-        text-align: center;
+        font-size: 4em;
     }
 
-    .occupation {
-        text-align: center;
-    }
-}
 
-
-a.cta {
-    padding    : 1em 3em;
-    margin-top : 32px;
-    border     : none;
+    .cta {
+        padding    : 1em 3em;
+        margin-top : 1.5em;
+        border     : none;
+        
+        background-color : #474747;
+        color: white;
+        text-decoration: none;
     
-    background-color : #474747;
-    // background-color : gold;
-    color: white;
-    // color: black;
-    font-size: 18px;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
+        cursor: pointer;
+    }
 }
 
 
 .learn-more {
     position : absolute;
-    bottom   : 32px;
-    right    : 32px;
-    // bottom   : 112px;
+    bottom   : 1.5em;
+    right    : 1.5em;
 }
 
 
 // Projects page
 .project {
-    
     margin: 0 auto;
 
-    & + & { margin-top: 96px; }
-    
+    & + & { margin-top: 4em; }
     
     *:not(:first-child) {
         display : block;
-        margin  : 16px auto 0;
+        margin  : 0.5em auto 0;
     }
 
     .project__link {
@@ -183,9 +203,6 @@ a.cta {
     img {
         width      : 100%;
         max-height : 50vw;
-        
-        // object-fit      : contain;
-        // object-position : top;
 
         object-fit : cover;
     }
@@ -197,11 +214,11 @@ a.cta {
     * {
         display : block;
 
-        margin        : 32px auto ;
-        padding       : 8px       ;
-        width         : 100%      ;
-        max-width     : 60ch      ;
-        border-radius : 10px      ;
+        margin        : 1.5em auto ;
+        padding       : 0.5em      ;
+        width         : 100%       ;
+        max-width     : 60ch       ;
+        border-radius : 10px       ; // leaving as px, should probably persist
 
         font-family : inherit ;
         font-size   : inherit ;
@@ -225,7 +242,7 @@ a.cta {
 
     input:last-child {  // The SEND button
         padding       : 1em 3em ;
-        margin-top    : 32px    ;
+        margin-top    : 1.5em   ;
         
         border        : none ;
         border-radius : 0    ;
@@ -239,79 +256,12 @@ a.cta {
 
 
 // Screen: Laptops / Tablets (600px <= x < 1000px)
-@media screen and (min-width: 600px) {
-    .header {
-        a {
-            // max-width: 130px;
-            max-width: 200px;
-        }
-    }
-
-    .content {
-        & > * {
-            max-width: 517px;
-            margin: 0 auto;
-        }
-    }
-}
+@media screen and (min-width: 600px) { @import 'laptop'; }
 
 
 // Screen: Small - Large monitors (1000px <= x < 2000px)
-@media screen and (min-width: 1000px) {
-    .header {
-        a {
-            // max-width: 175px;
-            max-width: 250px;
-        }
-    }
-
-    .content {
-        & > * {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-    }
-}
+@media screen and (min-width: 1000px) { @import 'desktop'; }
 
 
 // Screen: Extra large desktops (x >= 2000px)
-@media screen and (min-width: 2000px) {
-
-    html {
-        font-size: 1.25vw;
-    }
-
-    .main-content {    
-        .name {
-            font-size: 4vw;
-        }
-    }
-
-    .header {
-        height: auto;
-        a {
-            // max-width: 175px;
-            max-width: 15vw;
-            padding: 1.25vw 3.5vw;
-        }
-    }
-
-    .content {
-        & > * {
-            max-width: 40vw;
-            margin: 0 auto;
-        }
-        
-        p {
-            margin    : 2vw auto 0;
-            max-width : 50ch;
-        }
-    }
-
-    .cta {
-        padding    : 1.25vw 3.5vw;
-        margin-top : 2vw;
-        
-        font-size: inherit;
-    }
-}
+@media screen and (min-width: 2000px) { @import 'extra-large'; }

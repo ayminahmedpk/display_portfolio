@@ -18,7 +18,7 @@ import ContactPage  from '../Pages/ContactPage/ContactPage.js'   ;
 import Header  from '../Components/Header/Header.js' ;
 
 
-import './App.scss';
+import './style.scss';
 // import '../Pages/Pages.scss';
 
 

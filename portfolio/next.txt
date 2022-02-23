@@ -1,0 +1,15 @@
+
+
+x Clean up CSS structure - imports and breakpoins in different files
+
+x Make CSS responsive - everything (except font-size) in ems
+
+x Cleaner and leaner structure / readability of css and markup
+
+x Add the icons for header
+
+* Project Description. Need CSS Excerpts and a basic, abrupt accordion. Just
+  needs a class-flip on click, really. Could even use display:none. Goona hook
+  the JS in, though. CSS will be typical.
+
+* Refactor colors
