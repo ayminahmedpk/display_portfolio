@@ -1,7 +1,0 @@
-
-
-@for $i from 1 through 4 {
-    .carousel--page-#{$i} {
-        transform: translateX( calc(-100% * #{$i - 1}) );
-    }
-}

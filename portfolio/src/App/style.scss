@@ -11,6 +11,7 @@
 
 
 // Global
+// Screen: Mobile (x < 600px)
 * {
     margin     : 0;
     padding    : 0;
@@ -19,25 +20,23 @@
 
 
 html {
-    height : 100%;
-    min-width: 320px;
+    height    : 100%;
+    min-width : 320px;
     
-    background-color : black;
-    font-family: Verdana;
-    // font-family: sans-serif;
-    // font-size: 20px;
-    font-size: 18px;
-    
+    font-family      : Verdana;
+    font-size        : 18px;
 }
 
 
-body {
-    height: 100%;
-}
+body { height: 100%; }
+
+$color-text   : white;
+$color-accent : gold;
+$color-dark   : #272727;
+$color-light  : #474747;
 
 
-// Screen: Mobile (x < 600px)
-// All pages
+// -------------------------------- <Layout> -----------------------------------
 #root {
     display            : grid;
     grid-template-rows : auto 1fr auto;
@@ -55,17 +54,43 @@ body {
     min-height : 25em;
     height     : 100%;
 
-    color : white;
+    color : $color-text;
 }
 
 
+.content {
+    background-color : $color-dark;
+    padding          : 1.5em;
+    
+    & > * {
+        max-width : 25em;
+        margin    : 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        margin    : 1.5em auto 0;
+        max-width : 50ch;
+    }
+
+    a {
+        color: $color-accent;
+    }
+}
+// ------------------------------- <Layout /> ----------------------------------
+
+
+// -------------------------------- <Header> -----------------------------------
 .header {
     display         : flex;
     justify-content : center;
 
     height : 4em;
     
-    background-color: #474747;
+    background-color: $color-light;
 
     a {
         display         : flex;
@@ -74,12 +99,12 @@ body {
         
         width: 100%;
 
-        color           : white;
+        color           : $color-text;
         text-decoration : none;
 
         &.active {
-            background-color : #272727;
-            color            : gold;
+            background-color : $color-dark;
+            color            : $color-accent;
         }
     }
 
@@ -110,34 +135,11 @@ body {
     }
 
 }
-
-
-.content {
-    background-color : #272727;
-    padding          : 1.5em;
-    
-    & > * {
-        max-width : 25em;
-        margin    : 0 auto;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        margin    : 1.5em auto 0;
-        max-width : 50ch;
-    }
-
-    a {
-        color: gold;
-    }
-}
+// ------------------------------- <Header /> ----------------------------------
 
 
 
-// Homepage
+// -------------------------------- <Homepage> ---------------------------------
 .main-content {
     display        : flex;
     flex-direction : column;
@@ -164,8 +166,8 @@ body {
         margin-top : 1.5em;
         border     : none;
         
-        background-color : #474747;
-        color: white;
+        background-color : $color-light;
+        color: $color-text;
         text-decoration: none;
     
         cursor: pointer;
@@ -178,9 +180,11 @@ body {
     bottom   : 1.5em;
     right    : 1.5em;
 }
+// ------------------------------- <Homepage/> ---------------------------------
 
 
-// Projects page
+
+// ------------------------------ <Projectspage> -------------------------------
 .project {
     margin: 0 auto;
 
@@ -196,10 +200,10 @@ body {
 
         padding : 0.25em 1em;
 
-        color            : white;
+        color            : $color-text;
         text-decoration  : none;
         text-align       : center;
-        background-color : #474747;
+        background-color : $color-light;
 
         &.accordion {
             max-height : 1.7em;
@@ -248,9 +252,13 @@ body {
         object-fit : cover;
     }
 }
+// ----------------------------- <Projectspage /> ------------------------------
 
 
-// Contact page
+// ------------------------------ <Contactpage> --------------------------------
+
+.hidden { display: none; }
+
 .mail-form {
     * {
         display : block;
@@ -263,6 +271,8 @@ body {
 
         font-family : inherit ;
         font-size   : inherit ;
+
+        &.succeeded { display: none; }
     }
 
     
@@ -288,13 +298,20 @@ body {
         border        : none ;
         border-radius : 0    ;
     
-        background-color : #474747 ;
-        color            : white   ;
+        background-color : $color-light ;
+        color            : $color-text   ;
 
         cursor : pointer ;
     }
 }
 
+.error-message {
+    color      : red;
+    text-align : center;
+}
+
+.success-message { text-align : center; }
+// ----------------------------- <Contactpage /> -------------------------------
 
 // Screen: Laptops / Tablets (600px <= x < 1000px)
 @media screen and (min-width: 600px) { @import 'laptop'; }

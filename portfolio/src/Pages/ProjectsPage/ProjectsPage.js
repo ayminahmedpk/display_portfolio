@@ -70,7 +70,8 @@ const ProjectsPage = () => {
                 <p>
                     <strong>Highlights:</strong> React, Redux, Routing, Google
                     OAuth (direct endpoints - no library), YouTube Data API v3
-                    (search, posting comments), custom hooks.
+                    (search, posting comments), container/component
+                    architecture, custom hooks.
                 </p>
             </a>
         </>

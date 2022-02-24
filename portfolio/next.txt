@@ -12,9 +12,11 @@ x Project Description. Need CSS Excerpts and a basic, abrupt accordion. Just
   needs a class-flip on click, really. Could even use display:none. Typical
   CSS. An arrow as well, that will be rotated.
 
-* Refactor colors
+x Refactor colors
 
-* Refactor entire CSS
+x Refactor entire CSS
+
+* Contact form feedback
 
 * Complete projects changes
 

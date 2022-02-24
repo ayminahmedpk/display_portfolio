@@ -9,9 +9,6 @@ import aboutIcon from '../../resources/images/icons/about.svg';
 import projectsIcon from '../../resources/images/icons/projects.svg';
 import contactIcon from '../../resources/images/icons/contact.svg';
 
-// import './Header.scss';
-import './Header.scss';
-
 
 const Header = () => {
 
