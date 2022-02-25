@@ -16,9 +16,9 @@ x Refactor colors
 
 x Refactor entire CSS
 
-* Contact form feedback
+x Contact form feedback
 
-* Complete projects changes
+X Complete projects changes
 
 * Finalize
 

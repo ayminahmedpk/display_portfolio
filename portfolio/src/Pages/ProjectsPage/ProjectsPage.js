@@ -7,73 +7,63 @@ import Project from '../../Components/Project/Project.js';
 import calculatorImg from '../../resources/images/projects/calculator/calculator.jpg';
 import fourCardImg   from '../../resources/images/projects/four-card/four-card.jpg';
 import sot           from '../../resources/images/projects/sot/sot.png';
-
-import arrowDown from '../../resources/images/icons/arrow-down.svg';
+import portfolio     from '../../resources/images/projects/portfolio/portfolio.png';
 
 
 const ProjectsPage = () => {
 
-    const handler = (e) => {
-        (e.currentTarget.classList.toggle("accordion--expanded"));
-    }
-
     const descriptionFourCard = (
         <>
-            <a className="project__link accordion" onClick={handler}>
-                <div>
-                    <span> Details </span> 
-                        <img src={arrowDown} alt="" className="arrow" />
-                </div>
-                <p>
-                    <strong>Description:</strong> Custom solution for a
-                    Front-End Mentor challenge.
-                </p>
-                <p>
-                    <strong>Highlights:</strong> Mobile-first development, Grid,
-                    Flexbox, BEM.
-                </p>
-            </a>
+            <p>
+                <strong>Description:</strong> Custom solution for a
+                Front-End Mentor challenge.
+            </p>
+            <p>
+                <strong>Highlights:</strong> Mobile-first development, Grid,
+                Flexbox, BEM.
+            </p>
         </>
     );
 
     const descriptionCalculator = (
         <>
-            <a className="project__link accordion" onClick={handler}>
-                <div>
-                    <span> Details </span> 
-                        <img src={arrowDown} alt="" className="arrow" />
-                </div>
-                <p>
-                    <strong>Description:</strong> Custom solution for a
-                    Front-End Mentor challenge.
-                </p>
-                <p>
-                    <strong>Highlights:</strong> State design pattern, event
-                    delegation pattern, local storage, SASS lists,
-                    theme-switcher, customized slider.
-                </p>
-            </a>
+            <p>
+                <strong>Description:</strong> Custom solution for a
+                Front-End Mentor challenge.
+            </p>
+            <p>
+                <strong>Highlights:</strong> State design pattern, event
+                delegation pattern, local storage, SASS lists,
+                theme-switcher, customized slider.
+            </p>
         </>
     );
 
     const descriptionSOT = (
         <>
-            <a className="project__link accordion" onClick={handler}>
-                <div>
-                    <span> Details </span> 
-                        <img src={arrowDown} alt="" className="arrow" />
-                </div>
-                <p>
-                    <strong>Description:</strong> A tool for generating and
-                    posting timestamps as YouTube comments.
-                </p>
-                <p>
-                    <strong>Highlights:</strong> React, Redux, Routing, Google
-                    OAuth (direct endpoints - no library), YouTube Data API v3
-                    (search, posting comments), container/component
-                    architecture, custom hooks.
-                </p>
-            </a>
+            <p>
+                <strong>Description:</strong> A tool for generating and
+                posting timestamps as YouTube comments.
+            </p>
+            <p>
+                <strong>Highlights:</strong> React, Redux, Routing, Google
+                OAuth (direct endpoints - no library), YouTube Data API v3
+                (search, posting comments), container/component
+                architecture, custom hooks.
+            </p>
+        </>
+    );
+    
+    const descriptionPortfolio = (
+        <>
+            <p>
+                <strong>Description:</strong> This portfolio, as well as an
+                alternate implementation using my carousel hook instead of
+                router.
+            </p>
+            <p>
+                <strong>Highlights:</strong> React, custom hooks.
+            </p>
         </>
     );
 
@@ -83,52 +73,98 @@ const ProjectsPage = () => {
             id          : 1,
             name        : 'FEM Four-Card Section',
             image       : fourCardImg,
-            webLink     : 'https://ayminahmedpk.github.io/display-fem-four_card/',
-            repoLink    : 'https://github.com/ayminahmedpk/display-fem-four_card/',
-            femProject  : true,
-            femLink     : 'https://www.frontendmentor.io/solutions/figma-grid-areas-and-autofit-flex-and-auto-margins-bem-sass-mVn4Kes-9',
+            links       : [
+                {
+                    id     : 1,
+                    name   : 'Live Website',
+                    target : 'https://ayminahmedpk.github.io/display-fem-four_card/',
+                },
+                {
+                    id     : 2,
+                    name   : 'Github Repository',
+                    target : 'https://github.com/ayminahmedpk/display-fem-four_card/',
+                },
+                {
+                    id     : 3,
+                    name   : 'Compare site to desktop design',
+                    target : 'https://www.frontendmentor.io/solutions/figma-grid-areas-and-autofit-flex-and-auto-margins-bem-sass-mVn4Kes-9',
+                },
+            ],
             description : descriptionFourCard,
         },
         {
             id          : 2,
             name        : 'FEM Calculator',
             image       : calculatorImg,
-            webLink     : 'https://ayminahmedpk.github.io/display-fem-calculator_app/',
-            repoLink    : 'https://github.com/ayminahmedpk/display-fem-calculator_app/',
-            femProject  : true,
-            femLink     : 'https://www.frontendmentor.io/solutions/sass-lists-for-themes-local-storage-custom-slider-oop-calculator-4zp1kBWp8',
+            links       : [
+                {
+                    id     : 1,
+                    name   : 'Live Website',
+                    target : 'https://ayminahmedpk.github.io/display-fem-calculator_app/',
+                },
+                {
+                    id     : 2,
+                    name   : 'Github Repository',
+                    target : 'https://github.com/ayminahmedpk/display-fem-calculator_app/',
+                },
+                {
+                    id     : 3,
+                    name   : 'Compare site to desktop design',
+                    target : 'https://www.frontendmentor.io/solutions/sass-lists-for-themes-local-storage-custom-slider-oop-calculator-4zp1kBWp8',
+                },
+            ],
             description : descriptionCalculator,
         },
         {
             id         : 3,
             name       : 'Stamps Of Time',
             image      : sot,
-            webLink    : 'https://sot3.netlify.app',
-            repoLink   : 'https://github.com/ayminahmedpk/display_sot',
-            femProject : false,
+            links       : [
+                {
+                    id     : 1,
+                    name   : 'Live Website',
+                    target : 'https://sot3.netlify.app',
+                },
+                {
+                    id     : 2,
+                    name   : 'Github Repository',
+                    target : 'https://github.com/ayminahmedpk/display_sot',
+                },
+            ],
             description : descriptionSOT,
+        },
+        {
+            id         : 4,
+            name       : 'Portfolio (and Alternate)',
+            image      : portfolio,
+            links       : [
+                {
+                    id     : 1,
+                    name   : 'Github Repository',
+                    target : '#',
+                },
+                {
+                    id     : 2,
+                    name   : 'Alternate Website',
+                    target : '#',
+                },
+                {
+                    id     : 3,
+                    name   : 'Github Repository (Alternate)',
+                    target : '#',
+                },
+            ],
+            description : descriptionPortfolio,
         },
     ];
 
 
-    const projects = projectsData.map(({
-                                        id,
-                                        name,
-                                        image,
-                                        webLink,
-                                        repoLink,
-                                        femProject = false,
-                                        femLink,
-                                        description,
-                                    }) => (
+    const projects = projectsData.map(({id, name, image, links, description}) => (
         <Project
             key         = {id}
             name        = {name}
             image       = {image}
-            webLink     = {webLink}
-            repoLink    = {repoLink}
-            femProject  = {femProject}
-            femLink     = {femLink}
+            links       = {links}
             description = {description}
         />
     ));

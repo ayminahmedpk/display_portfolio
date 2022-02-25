@@ -1,0 +1,5 @@
+
+
+Doing the portfolio but instead of routing, using a custom carousel hook I made.
+
+Why, though.
