@@ -3,8 +3,8 @@
 import React from 'react';
 
 import {
-     BrowserRouter as Router ,
-    //  HashRouter as Router    ,
+    //  BrowserRouter as Router ,
+     HashRouter as Router    ,
      Routes                  ,
      Route                   ,
  } from 'react-router-dom';
