@@ -57,12 +57,10 @@ const ProjectsPage = () => {
     const descriptionPortfolio = (
         <>
             <p>
-                <strong>Description:</strong> This portfolio, as well as an
-                alternate implementation using my carousel hook instead of
-                router.
+                <strong>Description:</strong> A very minimalistic portfolio.
             </p>
             <p>
-                <strong>Highlights:</strong> React, custom hooks.
+                <strong>Highlights:</strong> React, Routing, Tiny Tweaks.
             </p>
         </>
     );
@@ -135,23 +133,13 @@ const ProjectsPage = () => {
         },
         {
             id         : 4,
-            name       : 'Portfolio (and Alternate)',
+            name       : 'This Portfolio',
             image      : portfolio,
             links       : [
                 {
                     id     : 1,
                     name   : 'Github Repository',
-                    target : '#',
-                },
-                {
-                    id     : 2,
-                    name   : 'Alternate Website',
-                    target : '#',
-                },
-                {
-                    id     : 3,
-                    name   : 'Github Repository (Alternate)',
-                    target : '#',
+                    target : 'https://github.com/ayminahmedpk/display_portfolio',
                 },
             ],
             description : descriptionPortfolio,
