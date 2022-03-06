@@ -13,10 +13,10 @@ const HomePage = () => {
 
     return (
         <div className="content">
-            <div className="main-content">
-                <h1 className='name'> AYMIN AHMED </h1>
-                <div className="occupation">FRONT-END DEVELOPER</div>
-                <a target="_blank" href={upworkLink} className="cta"><h2>HIRE NOW</h2></a>
+            <div className="cta">
+                <h1 className='cta__name'> Aymin Ahmed </h1>
+                <p className="cta__description">Front-End Web Developer</p>
+                <a className="cta__button" target="_blank" href={upworkLink}><h2>Hire Now</h2></a>
             </div>
             <div className="learn-more">or <Link to='/about'>learn more</Link></div>
         </div>

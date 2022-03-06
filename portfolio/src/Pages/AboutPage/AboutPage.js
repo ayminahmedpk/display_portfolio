@@ -8,12 +8,10 @@ import { Link } from 'react-router-dom';
 const AboutPage = () => {
     return (
         <div className="content">
-            <h2>
-                Hello!
-            </h2>
+            <h2 className="page-name"> About Me </h2>
 
             <p>
-                My name is Aymin Ahmed and I am an entry-level
+                Hello! My name is Aymin Ahmed and I am an entry-level
                 <strong> React </strong> developer. I love to write
                 <strong> clean code </strong> and can implement designs in a
                 <strong> pixel perfect </strong> manner.

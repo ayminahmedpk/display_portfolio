@@ -22,18 +22,59 @@
 html {
     height    : 100%;
     min-width : 320px;
-    
-    font-family      : Verdana;
-    font-size        : 18px;
 }
 
 
 body { height: 100%; }
 
-$color-text   : white;
-$color-accent : gold;
-$color-dark   : #272727;
-$color-light  : #474747;
+$color-text   : black;
+$color-accent : black;
+$color-dark   : #DEDEDE;
+$color-light  : #EEEEEE;
+
+// $color-text   : white;
+// $color-accent : gold;
+// $color-dark   : #272727;
+// $color-light  : #474747;
+
+// ------------------------------ <Typography> ---------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+
+html {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5rem;
+}
+
+$line-height-m: 1.5rem;
+
+h3 {
+    font-size   : 1.2rem;
+    font-weight : 500;
+    line-height : $line-height-m;
+}
+
+h2 {
+    font-size   : 1.44rem;
+    font-weight : 600;
+    line-height : $line-height-m;
+
+    &.page-name {
+        text-align    : center;
+        margin-bottom : $line-height-m*2;
+    }
+}
+
+h1 {
+    font-size   : 2.488rem;
+    font-weight : 700;
+    line-height : $line-height-m * 2;
+}
+
+p     { max-width: 25em;            }
+p + p { margin-top: $line-height-m; }
+
+// ------------------------------ <Typography /> -------------------------------
 
 
 // -------------------------------- <Layout> -----------------------------------
@@ -51,7 +92,7 @@ $color-light  : #474747;
 
     position: relative;
 
-    min-height : 25em;
+    min-height : 25em; // 400px
     height     : 100%;
 
     color : $color-text;
@@ -59,26 +100,17 @@ $color-light  : #474747;
 
 
 .content {
-    background-color : $color-dark;
-    padding          : 1.5em;
+    // background-color : $color-dark;
+
+    padding: ($line-height-m * 2) ($line-height-m);
     
     & > * {
-        max-width : 25em;
-        margin    : 0 auto;
+        // max-width    : 25em;
+        margin-left  : auto;
+        margin-right : auto;
     }
 
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        margin    : 1.5em auto 0;
-        max-width : 50ch;
-    }
-
-    a {
-        color: $color-accent;
-    }
+    // a { color: $color-accent; }
 }
 // ------------------------------- <Layout /> ----------------------------------
 
@@ -87,98 +119,111 @@ $color-light  : #474747;
 .header {
     display         : flex;
     justify-content : center;
-
-    height : 4em;
     
     background-color: $color-light;
-
-    a {
-        display         : flex;
-        align-items     : center;
-        justify-content : center;
-        
-        width: 100%;
-
-        color           : $color-text;
-        text-decoration : none;
-
-        &.active {
-            background-color : $color-dark;
-            color            : $color-accent;
-        }
-    }
-
-    a .header__link-icon {
-        height : 2em;
-        width  : 2em;
-        // Whiten
-        filter : grayscale(100%)
-                    invert(100%)
-                    sepia(0%)
-                    saturate(7500%)
-                    hue-rotate(106deg)
-                    brightness(102%)
-                    contrast(95%)
-                ;
-    }
-    a.active .header__link-icon {
-        filter: invert(92%)
-                sepia(14%)
-                saturate(6854%)
-                hue-rotate(356deg)
-                brightness(101%)
-                contrast(106%)
-    }
-
-    &__link-text {
-        display: none;
-    }
-
 }
+
+
+.header__header-links {
+    display : flex;
+    
+    width : 100%;
+}
+
+
+.header__header-link {
+        display         : flex   ;
+        align-items     : center ;
+        justify-content : center ;
+        
+        flex           : 1                    ;
+        padding-top    : $line-height-m * 0.5 ;
+        padding-bottom : $line-height-m * 0.5 ;
+        
+        color           : $color-text ;
+        text-decoration : none        ;
+}
+
+
+.header__link-icon {
+    width          : $line-height-m;
+    height         : $line-height-m;
+    
+    // Whiten
+    // filter : grayscale(100%)
+    //          invert(100%)
+    //          sepia(0%)
+    //          saturate(7500%)
+    //          hue-rotate(106deg)
+    //          brightness(102%)
+    //          contrast(95%)
+    //          ;
+    
+}
+
+
+.header__header-link.active {
+    background-color : $color-dark;
+    color            : $color-accent;
+
+    // & .header__link-icon {
+    //     filter: invert(92%)
+    //             sepia(14%)
+    //             saturate(6854%)
+    //             hue-rotate(356deg)
+    //             brightness(101%)
+    //             contrast(106%)
+    //             ;
+
+    // }
+}
+
+
+.header__link-text { display: none; }
+
+// }
 // ------------------------------- <Header /> ----------------------------------
 
 
 
 // -------------------------------- <Homepage> ---------------------------------
-.main-content {
+.cta {
     display        : flex;
     flex-direction : column;
     align-items    : center;
 
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+    
     width   : 100%;
-    padding : 0 1.5em;
-
-    position : absolute;
-    top      : 50%;
-    left     : 50%;
-
+    
     text-align: center;
+
+    & > * + * { margin-top: $line-height-m; }
+}
+
+
+a.cta__button {
+    padding       : $line-height-m*0.5 $line-height-m*2;
+    border-radius : 1em;
+    // margin-top    : $line-height-m*0.5;
     
-    transform: translate(-50%, -50%);
+    font-family      : inherit;
+    text-decoration  : none;
+    color            : $color-text;
+    // background-color : $color-light;
+    background-color : $color-dark;
 
-    .name {
-        font-size: 4em;
-    }
-
-
-    .cta {
-        padding    : 1em 3em;
-        margin-top : 1.5em;
-        border     : none;
-        
-        background-color : $color-light;
-        color: $color-text;
-        text-decoration: none;
-    
-        cursor: pointer;
-    }
+    cursor: pointer;
 }
 
 
 .learn-more {
     position : absolute;
-    bottom   : 1.5em;
-    right    : 1.5em;
+    bottom   : $line-height-m;
+    right    : $line-height-m;
 }
 // ------------------------------- <Homepage/> ---------------------------------
 
@@ -186,72 +231,92 @@ $color-light  : #474747;
 
 // ------------------------------ <Projectspage> -------------------------------
 .project {
-    margin: 0 auto;
+    text-align: center;
+    // border: 1px solid black;
+    box-shadow:  1px  1px black,
+                -1px -1px black;
 
-    & + & { margin-top: 4em; }
-    
-    *:not(:first-child) {
-        display : block;
-        margin  : 0.5em auto 0;
-    }
-
-    .project__link {
-        position: relative;
-
-        padding : 0.25em 1em;
-
-        color            : $color-text;
-        text-decoration  : none;
-        text-align       : center;
-        background-color : $color-light;
-
-        &.accordion {
-            max-height : 1.7em;
-            overflow   : hidden;
-            cursor     : pointer;
-
-            & .arrow {
-                display : inline;
-
-                position: absolute;
-                
-                top   : .5em;
-                right : 0.5em;
-                
-                width   : 1.5em;
-                height  : 0.75em;
-                margin  : 0;
-
-                filter: grayscale(100%)
-                        invert(100%)
-                        sepia(0%)
-                        saturate(7500%)
-                        hue-rotate(106deg)
-                        brightness(102%)
-                        contrast(95%)
-                ;
-            }
-
-            &--expanded {
-                & .arrow {
-                    transform: rotate(180deg);
-                }
-            }
-
-            & p { text-align: left; }
-
-            &--expanded { max-height: none; }
-        }
-    }
-
-
-    img {
-        width      : 100%;
-        max-height : 50vw;
-
-        object-fit : cover;
+    & + & {
+        margin-top: $line-height-m*2;
     }
 }
+
+
+.project__name { padding: $line-height-m*0.5; }
+
+
+.project__image-container {
+    position : relative;
+    
+    width          : 100%;
+    padding-bottom : 62.5%;
+}
+
+
+.project__image {
+    display : block;
+    
+    position : absolute;
+    
+    width      : 100%;
+    max-height : 100%;
+    // border-top : 1px solid black;
+    
+    margin     : 0;
+    object-fit : cover;
+}
+
+
+.project__link,
+.project__details-container {
+    display : block;
+
+    padding    : $line-height-m*0.5 $line-height-m ;
+    // border-top : 1px solid black;
+
+    color            : $color-text;
+    text-decoration  : none;
+    background-color : $color-light;
+    // border           : 1px solid black; //
+
+    // & p + p { margin-top: $line-height-m*0.5; }
+}
+
+
+.accordion {
+    position   : relative;
+    max-height : $line-height-m*2;
+    overflow   : hidden;
+    cursor     : pointer;
+
+    .arrow {
+        display : inline;
+    
+        position : absolute;
+        top      : $line-height-m;
+        right    : 1em;
+        // right    : $line-height-m;
+        
+        height    : $line-height-m;
+        transform : translateY(-50%);
+    }
+}
+
+
+.accordion--expanded {
+    max-height: none;
+    .arrow {
+        transform : rotate(180deg)
+                    translateY(50%);
+    }
+}
+
+
+.project__details {
+    text-align: left;
+}
+
+
 // ----------------------------- <Projectspage /> ------------------------------
 
 
@@ -310,15 +375,369 @@ $color-light  : #474747;
 }
 
 .success-message { text-align : center; }
-// ----------------------------- <Contactpage /> -------------------------------
-
-// Screen: Laptops / Tablets (600px <= x < 1000px)
-@media screen and (min-width: 600px) { @import 'laptop'; }
 
 
-// Screen: Small - Large monitors (1000px <= x < 2000px)
-@media screen and (min-width: 1000px) { @import 'desktop'; }
+// // ----------------------------- <Contactpage /> -------------------------------
+
+// // Screen: Laptops / Tablets (600px <= x < 1000px)
+// @media screen and (min-width: 600px) { @import 'laptop'; }
 
 
-// Screen: Extra large desktops (x >= 2000px)
-@media screen and (min-width: 2000px) { @import 'extra-large'; }
+// // Screen: Small - Large monitors (1000px <= x < 2000px)
+// @media screen and (min-width: 1000px) { @import 'desktop'; }
+
+
+// // Screen: Extra large desktops (x >= 2000px)
+// @media screen and (min-width: 2000px) { @import 'extra-large'; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // More readable to have all css in one file when breakpoints affect numerous
+// // components, and the relationship should be seen clearly.
+
+// // Was initially split into each component's own file, hence the
+// // disorganization and awkward naming.
+
+// // Additionally, if extra large and beyond screen sizes are to be supported,
+// // it is better to set initial dimensions in terms of font-size, even if the
+// // element is supposed to be scalable. Later, the font-size can be scaled
+// // according to viewport width.
+
+
+// // Global
+// // Screen: Mobile (x < 600px)
+// * {
+//     margin     : 0;
+//     padding    : 0;
+//     box-sizing : border-box;
+// }
+
+
+// html {
+//     height    : 100%;
+//     min-width : 320px;
+    
+//     font-family      : Verdana;
+//     font-size        : 18px;
+// }
+
+
+// body { height: 100%; }
+
+// $color-text   : white;
+// $color-accent : gold;
+// $color-dark   : #272727;
+// $color-light  : #474747;
+
+
+// // -------------------------------- <Layout> -----------------------------------
+// #root {
+//     display            : grid;
+//     grid-template-rows : auto 1fr auto;
+//     grid-template-areas:
+//                             'h'
+//                             'c'
+//                             'f'
+//     ;
+//     .header  { grid-area: h ; }
+//     .content { grid-area: c ; }
+//     .footer  { grid-area: f ; }
+
+//     position: relative;
+
+//     min-height : 25em;
+//     height     : 100%;
+
+//     color : $color-text;
+// }
+
+
+// .content {
+//     background-color : $color-dark;
+//     padding          : 1.5em;
+    
+//     & > * {
+//         max-width : 25em;
+//         margin    : 0 auto;
+//     }
+
+//     h2 {
+//         text-align: center;
+//     }
+
+//     p {
+//         margin    : 1.5em auto 0;
+//         max-width : 50ch;
+//     }
+
+//     a {
+//         color: $color-accent;
+//     }
+// }
+// // ------------------------------- <Layout /> ----------------------------------
+
+
+// // -------------------------------- <Header> -----------------------------------
+// .header {
+//     display         : flex;
+//     justify-content : center;
+
+//     height : 4em;
+    
+//     background-color: $color-light;
+
+//     a {
+//         display         : flex;
+//         align-items     : center;
+//         justify-content : center;
+        
+//         width: 100%;
+
+//         color           : $color-text;
+//         text-decoration : none;
+
+//         &.active {
+//             background-color : $color-dark;
+//             color            : $color-accent;
+//         }
+//     }
+
+//     a .header__link-icon {
+//         height : 2em;
+//         width  : 2em;
+//         // Whiten
+//         filter : grayscale(100%)
+//                     invert(100%)
+//                     sepia(0%)
+//                     saturate(7500%)
+//                     hue-rotate(106deg)
+//                     brightness(102%)
+//                     contrast(95%)
+//                 ;
+//     }
+//     a.active .header__link-icon {
+//         filter: invert(92%)
+//                 sepia(14%)
+//                 saturate(6854%)
+//                 hue-rotate(356deg)
+//                 brightness(101%)
+//                 contrast(106%)
+//     }
+
+//     &__link-text {
+//         display: none;
+//     }
+
+// }
+// // ------------------------------- <Header /> ----------------------------------
+
+
+
+// // -------------------------------- <Homepage> ---------------------------------
+// .main-content {
+//     display        : flex;
+//     flex-direction : column;
+//     align-items    : center;
+
+//     width   : 100%;
+//     padding : 0 1.5em;
+
+//     position : absolute;
+//     top      : 50%;
+//     left     : 50%;
+
+//     text-align: center;
+    
+//     transform: translate(-50%, -50%);
+
+//     .name {
+//         font-size: 4em;
+//     }
+
+
+//     .cta {
+//         padding    : 1em 3em;
+//         margin-top : 1.5em;
+//         border     : none;
+        
+//         background-color : $color-light;
+//         color: $color-text;
+//         text-decoration: none;
+    
+//         cursor: pointer;
+//     }
+// }
+
+
+// .learn-more {
+//     position : absolute;
+//     bottom   : 1.5em;
+//     right    : 1.5em;
+// }
+// // ------------------------------- <Homepage/> ---------------------------------
+
+
+
+// // ------------------------------ <Projectspage> -------------------------------
+// .project {
+//     margin: 0 auto;
+
+//     & + & { margin-top: 4em; }
+    
+//     *:not(:first-child) {
+//         display : block;
+//         margin  : 0.5em auto 0;
+//     }
+
+//     .project__link {
+//         position: relative;
+
+//         padding : 0.25em 1em;
+
+//         color            : $color-text;
+//         text-decoration  : none;
+//         text-align       : center;
+//         background-color : $color-light;
+
+//         &.accordion {
+//             max-height : 1.7em;
+//             overflow   : hidden;
+//             cursor     : pointer;
+
+//             & .arrow {
+//                 display : inline;
+
+//                 position: absolute;
+                
+//                 top   : .5em;
+//                 right : 0.5em;
+                
+//                 width   : 1.5em;
+//                 height  : 0.75em;
+//                 margin  : 0;
+
+//                 filter: grayscale(100%)
+//                         invert(100%)
+//                         sepia(0%)
+//                         saturate(7500%)
+//                         hue-rotate(106deg)
+//                         brightness(102%)
+//                         contrast(95%)
+//                 ;
+//             }
+
+//             &--expanded {
+//                 & .arrow {
+//                     transform: rotate(180deg);
+//                 }
+//             }
+
+//             & p { text-align: left; }
+
+//             &--expanded { max-height: none; }
+//         }
+//     }
+
+
+//     img {
+//         width      : 100%;
+//         max-height : 50vw;
+
+//         object-fit : cover;
+//     }
+// }
+// // ----------------------------- <Projectspage /> ------------------------------
+
+
+// // ------------------------------ <Contactpage> --------------------------------
+// .hidden { display: none; }
+
+// .mail-form {
+//     * {
+//         display : block;
+
+//         margin        : 1.5em auto ;
+//         padding       : 0.5em      ;
+//         width         : 100%       ;
+//         max-width     : 60ch       ;
+//         border-radius : 10px       ; // leaving as px, should probably persist
+
+//         font-family : inherit ;
+//         font-size   : inherit ;
+
+//         &.succeeded { display: none; }
+//     }
+
+    
+//     input { text-align: center; }
+
+    
+//     textarea { min-height: 6em; }
+    
+
+//     *::placeholder {
+//         position : absolute ;
+//         top      : 50%      ;
+//         left     : 50%      ;
+        
+//         transform: translate(-50%, -50%);
+//     }
+
+
+//     input:last-child {  // The SEND button
+//         padding       : 1em 3em ;
+//         margin-top    : 1.5em   ;
+        
+//         border        : none ;
+//         border-radius : 0    ;
+    
+//         background-color : $color-light ;
+//         color            : $color-text   ;
+
+//         cursor : pointer ;
+//     }
+// }
+
+// .error-message {
+//     color      : red;
+//     text-align : center;
+// }
+
+// .success-message { text-align : center; }
+// // ----------------------------- <Contactpage /> -------------------------------
+
+// // Screen: Laptops / Tablets (600px <= x < 1000px)
+// @media screen and (min-width: 600px) { @import 'laptop'; }
+
+
+// // Screen: Small - Large monitors (1000px <= x < 2000px)
+// @media screen and (min-width: 1000px) { @import 'desktop'; }
+
+
+// // Screen: Extra large desktops (x >= 2000px)
+// @media screen and (min-width: 2000px) { @import 'extra-large'; }

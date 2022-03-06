@@ -58,12 +58,13 @@ const Header = () => {
 
     
     return (
-        <div className="header">  
-            {/* <NavLink to={'/'}>Home</NavLink> */}
-            <NavLink to={'/'}>{home}</NavLink>
-            <NavLink to={'/about'}>{about}</NavLink>
-            <NavLink to={'/projects'}>{projects}</NavLink>
-            <NavLink to={'/contact'}>{contact}</NavLink>
+        <div className="header">
+            <div className="header__header-links">
+                <NavLink className="header__header-link" to={'/'}        > {home}     </NavLink>
+                <NavLink className="header__header-link" to={'/about'}   > {about}    </NavLink>
+                <NavLink className="header__header-link" to={'/projects'}> {projects} </NavLink>
+                <NavLink className="header__header-link" to={'/contact'} > {contact}  </NavLink>
+            </div>
         </div>
     );
 }

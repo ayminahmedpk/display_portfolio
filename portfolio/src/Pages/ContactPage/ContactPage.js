@@ -41,8 +41,8 @@ const ContactPage = () => {
 
             {result=='success' ? <p className="success-message">{successMessage}</p> : '' }
 
-            <h2 className={result=='success'? 'hidden' : ''}>
-                Contact Form
+            <h2 className={result=='success'? 'page-name hidden' : 'page-name'}>
+                Contact Me
             </h2>
 
             {result=='error' ? <p className="error-message">Error: {errorMessage}</p> : '' }
