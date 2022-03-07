@@ -6,10 +6,6 @@ import emailjs from '@emailjs/browser';
 
 
 
-
-// import './ContactPage.scss';
-
-
 const ContactPage = () => {
 
     const [ result         , setResult         ] = useState('');
@@ -47,15 +43,15 @@ const ContactPage = () => {
 
             {result=='error' ? <p className="error-message">Error: {errorMessage}</p> : '' }
 
-            <form ref={form} onSubmit={sendEmail} className={`mail-form${result=='success'? ' hidden' : ''}`}>
+            <form ref={form} onSubmit={sendEmail} className={`form${result=='success'? ' hidden' : ''}`}>
 
-                <input type="text"  className="input" placeholder="Name"    name="name"   />
-                <input type="email" className="input" placeholder="Email"   name="email"  />
-                <input type="text"  className="input" placeholder="Subject" name="subject"/>
+                <input className="form__input" type="text"  placeholder="Name"    name="name"   />
+                <input className="form__input" type="email" placeholder="Email"   name="email"  />
+                <input className="form__input" type="text"  placeholder="Subject" name="subject"/>
 
-                <textarea placeholder="Your message" name="message"/>
+                <textarea className="form__textarea" placeholder="Your message" name="message"/>
 
-                <input type="submit" value="SEND"/>
+                <input className="form__send-button" type="submit" value="Send"/>
 
             </form>
         </div>

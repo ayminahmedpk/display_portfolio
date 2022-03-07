@@ -19,7 +19,6 @@ import Header  from '../Components/Header/Header.js' ;
 
 
 import './style.scss';
-// import '../Pages/Pages.scss';
 
 
 const App = () => {
