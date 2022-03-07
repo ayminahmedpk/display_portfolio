@@ -1,11 +1,17 @@
 
 
 x Implement mobile perfectly
-  - Finish contact form structural design
+  x Finish contact form structural design
 
 x Learn to deal with svgs
-  - Lighten the stroke on icons
+  x Lighten the stroke on icons
 
-x Implement tab and beyond structurally
+- Update images
 
-x Refactor css
+- Research into em based breakpoints
+
+- Implement tab and beyond structurally
+
+- Update content (finalize)
+
+- Refactor css (modularize / finalize)

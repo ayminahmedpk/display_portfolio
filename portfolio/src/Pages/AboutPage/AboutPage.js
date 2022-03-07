@@ -11,23 +11,19 @@ const AboutPage = () => {
             <h2 className="page-name"> About Me </h2>
 
             <p>
-                Hello! My name is Aymin Ahmed and I am an entry-level
-                <strong> React </strong> developer. I love to write
-                <strong> clean code </strong> and can implement designs in a
-                <strong> pixel perfect </strong> manner.
+                Hello! My name is Aymin Ahmed and I am a front-end web developer
+                with an IT degree from Staffordshire University.
             </p>
 
             <p>
-                Holding an IT degree from the University of Staffordshire (UK),
-                I have worked through various turorials and bootcamps to
-                gradually build up my front-end skillset.
+                I can implement designs in a <strong>pixel-perfect </strong>
+                manner and love to write <strong>clean code </strong>-
+                especially for <strong>React.</strong>
             </p>
 
             <p>
-                While you're here, please consider taking a moment to
-                inspect my <Link to='/projects'>projects</Link> and seeing these skills in action. I
-                greatly appreciate your time and value any feedback you
-                may be willing to provide.
+                Please take a look at my <Link to='/projects'>projects</Link> to
+                see these skills in action.
             </p>
         </div>
     );

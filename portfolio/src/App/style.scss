@@ -71,8 +71,9 @@ h1 {
     line-height : $line-height-m * 2;
 }
 
-p     { max-width: 25em;            }
 p + p { margin-top: $line-height-m; }
+
+a {color: darkorange;}
 
 // ------------------------------ <Typography /> -------------------------------
 
@@ -135,10 +136,11 @@ p + p { margin-top: $line-height-m; }
         display         : flex   ;
         align-items     : center ;
         justify-content : center ;
+
+        position : relative;
         
-        flex           : 1                    ;
-        padding-top    : $line-height-m * 0.5 ;
-        padding-bottom : $line-height-m * 0.5 ;
+        flex   : 1                ;
+        height : $line-height-m*2 ;
         
         color           : $color-text ;
         text-decoration : none        ;
@@ -146,19 +148,28 @@ p + p { margin-top: $line-height-m; }
 
 
 .header__link-icon {
-    width          : $line-height-m;
-    height         : $line-height-m;
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
     
-    // Whiten
-    // filter : grayscale(100%)
-    //          invert(100%)
-    //          sepia(0%)
-    //          saturate(7500%)
-    //          hue-rotate(106deg)
-    //          brightness(102%)
-    //          contrast(95%)
-    //          ;
+    width  : $line-height-m;
+    height : $line-height-m;
+    fill   : none;
+    stroke : black;
     
+    &.icon-home     { stroke-width: 10px  ; }
+    &.icon-about    { stroke-width: 18px  ; }
+    &.icon-contact  {
+        width        : $line-height-m*1.2;
+        height       : $line-height-m*1.2;
+        stroke-width: 0.7px;
+    }
+    &.icon-projects {
+        width        : $line-height-m*1.2;
+        height       : $line-height-m*1.2;
+        stroke-width : 1.1px ;
+    }
 }
 
 
@@ -166,16 +177,7 @@ p + p { margin-top: $line-height-m; }
     background-color : $color-dark;
     color            : $color-accent;
 
-    // & .header__link-icon {
-    //     filter: invert(92%)
-    //             sepia(14%)
-    //             saturate(6854%)
-    //             hue-rotate(356deg)
-    //             brightness(101%)
-    //             contrast(106%)
-    //             ;
-
-    // }
+    & .header__link-icon { stroke: darkorange; }
 }
 
 
@@ -233,8 +235,12 @@ a.cta__button {
 .project {
     text-align: center;
     // border: 1px solid black;
-    box-shadow:  1px  1px black,
-                -1px -1px black;
+    // box-shadow:  1px  1px black,
+    //             -1px -1px black;
+    & > * {
+        box-shadow :  1px  1px black,
+                     -1px -1px black;
+    }
 
     & + & {
         margin-top: $line-height-m*2;
@@ -283,38 +289,44 @@ a.cta__button {
 }
 
 
+.project__details-container {
+    position : relative;
+    cursor   : pointer;
+}
+
+.project__details { text-align: left; }
+
+
+.project__details-arrow {
+    display : inline;
+
+    position : absolute;
+    top      : $line-height-m;
+    right    : 1em;
+    // right    : $line-height-m;
+    
+    height    : $line-height-m;
+    width     : $line-height-m;
+    transform : translateY(-50%);
+
+    fill         : none;
+    stroke       : black;
+    stroke-width : 2px;
+
+}
+.accordion--expanded .project__details-arrow {
+    stroke: darkorange;
+    transform : rotate(180deg)
+                translateY(50%);
+}
+
+
 .accordion {
-    position   : relative;
     max-height : $line-height-m*2;
     overflow   : hidden;
-    cursor     : pointer;
-
-    .arrow {
-        display : inline;
-    
-        position : absolute;
-        top      : $line-height-m;
-        right    : 1em;
-        // right    : $line-height-m;
-        
-        height    : $line-height-m;
-        transform : translateY(-50%);
-    }
 }
 
-
-.accordion--expanded {
-    max-height: none;
-    .arrow {
-        transform : rotate(180deg)
-                    translateY(50%);
-    }
-}
-
-
-.project__details {
-    text-align: left;
-}
+.accordion--expanded { max-height: none; }
 
 
 // ----------------------------- <Projectspage /> ------------------------------
@@ -333,7 +345,8 @@ a.cta__button {
     height        : $line-height-m*2  ;
     padding       : 0 $line-height-m  ;
     margin-top    : $line-height-m    ;
-    border        : 1px solid black ;
+    border: none;
+    outline       : 1px solid black ;
     border-radius : 1em               ;
     // box-shadow    :  1px  1px black ,
     //                 -1px -1px black ;
@@ -341,6 +354,10 @@ a.cta__button {
     font-family : inherit ;
     font-size   : inherit ;
     text-align  : center  ;
+
+    &:focus {
+        outline: 1px solid orange;
+    }
 
     &.succeeded { display: none; }
 }
@@ -352,6 +369,8 @@ a.cta__button {
     padding : $line-height-m   ;
     
     text-align: left;
+    
+    resize: none;
     
     &::placeholder {
         position : absolute;
