@@ -93,7 +93,9 @@ a {color: darkorange;}
 
     position: relative;
 
-    min-height : 25em; // 400px
+    min-width  : 300px;
+    min-height : 450px;
+    // min-height : 25em; // 400px
     height     : 100%;
 
     color : $color-text;
@@ -102,8 +104,10 @@ a {color: darkorange;}
 
 .content {
     // background-color : $color-dark;
+    position: relative;
 
-    padding: ($line-height-m * 2) ($line-height-m);
+    width   : 100%; // (for homepage with all children positioned)
+    padding : ($line-height-m*2) ($line-height-m);
     
     & > * {
         // max-width    : 25em;
@@ -127,8 +131,9 @@ a {color: darkorange;}
 
 .header__header-links {
     display : flex;
+    justify-content: center;
     
-    width : 100%;
+    width: 100%;
 }
 
 
@@ -139,8 +144,9 @@ a {color: darkorange;}
 
         position : relative;
         
-        flex   : 1                ;
-        height : $line-height-m*2 ;
+        flex   : 1                  ;
+        height : $line-height-m*2   ;
+        // max-width: $line-height-m*4 ;
         
         color           : $color-text ;
         text-decoration : none        ;
@@ -195,7 +201,9 @@ a {color: darkorange;}
     align-items    : center;
 
     position  : absolute;
-    top       : 50%;
+    top       : calc(50% - (3em));
+    // position  : fixed;
+    // top       : 50%;
     left      : 50%;
     transform : translate(-50%, -50%);
     
@@ -294,7 +302,7 @@ a.cta__button {
     cursor   : pointer;
 }
 
-.project__details { text-align: left; }
+// .project__details { text-align: left; }
 
 
 .project__details-arrow {
@@ -407,13 +415,45 @@ a.cta__button {
 
 // // ----------------------------- <Contactpage /> -------------------------------
 
-// // Screen: Laptops / Tablets (600px <= x < 1000px)
-// @media screen and (min-width: 600px) { @import 'laptop'; }
+// Screen: Laptops / Tablets (600px <= x < 1000px)
+@media screen and (min-width: 37.5em) {
+    html {
+        font-size: 125%;
+    }
+    
+    .content {
+        padding: ($line-height-m*2);
+    }
+    
+    .header__header-links { max-width: 200em; }
+    .header__link-icon { display: none;  }
+    .header__link-text { display: block; }
+    
+    p {
+        max-width: 35em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
-// // Screen: Small - Large monitors (1000px <= x < 2000px)
-// @media screen and (min-width: 1000px) { @import 'desktop'; }
+// So media query's em is based on mobile, but em inside media query are based
+// on the actual elements font-size at that time.
+
+// Screen: Small - Large monitors (800px <= x < 2000px)
+@media screen and (min-width: 50em) { // 800px
+    .header__header-links { max-width: 40em; }
+
+    .content {
+        max-width    : 40em;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+
+}
 
 
-// // Screen: Extra large desktops (x >= 2000px)
-// @media screen and (min-width: 2000px) { @import 'extra-large'; }
+// Screen: Extra large desktops (x >= 2000px)
+@media screen and (min-width: 125em) {
+    html { font-size: 1vw; }
+}

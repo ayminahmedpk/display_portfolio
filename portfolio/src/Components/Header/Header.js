@@ -24,7 +24,7 @@ const Header = () => {
                   </>
 
     const projects = <>
-                        <svg className='header__link-icon icon-projects' viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round">
+                        <svg className='header__link-icon icon-projects' viewBox="0 0 32 32" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M10 9 L3 17 10 25 M22 9 L29 17 22 25 M18 7 L14 27"/>
                         </svg>
                         <p className={'header__link-text'}>

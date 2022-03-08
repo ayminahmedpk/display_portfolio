@@ -2,14 +2,6 @@
 
 // Screen: Laptops / Tablets (600px <= x < 1000px)
 
-html {
-    font-size: 20px;
-}
 
-.header {
-    a { max-width: 10em; }
 
-    &__link-icon { display: none;  }
-    &__link-text { display: block; }
-}
 

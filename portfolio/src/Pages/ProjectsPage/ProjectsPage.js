@@ -2,9 +2,18 @@
 
 import React from 'react';
 
-import calculatorImg from '../../resources/images/projects/calculator/calculator.jpg';
-import fourCardImg   from '../../resources/images/projects/four-card/four-card.jpg';
-import sot           from '../../resources/images/projects/sot/sot.png';
+import fourCardS   from '../../resources/images/projects/four-card/four-card-small.png';
+import fourCardM   from '../../resources/images/projects/four-card/four-card-medium.png';
+import fourCardL   from '../../resources/images/projects/four-card/four-card-large.png';
+
+import calculatorS from '../../resources/images/projects/calculator/calculator-small.png';
+import calculatorM from '../../resources/images/projects/calculator/calculator-medium.png';
+import calculatorL from '../../resources/images/projects/calculator/calculator-large.png';
+
+import sotS           from '../../resources/images/projects/sot/sot-small.png';
+import sotM           from '../../resources/images/projects/sot/sot-medium.png';
+import sotL           from '../../resources/images/projects/sot/sot-large.png';
+
 import portfolio     from '../../resources/images/projects/portfolio/portfolio.png';
 
 
@@ -21,13 +30,22 @@ const ProjectsPage = () => {
     );
 
     return (
+
+        <>
+        
         <div className="content">
             <h2 className="page-name">My Projects</h2>
             
             <div className="project">
                 <h3 className="project__name">FEM Four Card Landing Section</h3>
                 <div className="project__image-container">
-                    <img className="project__image" src={fourCardImg} />
+                    <img
+                        srcSet    = {`${fourCardS} 520w, ${fourCardM} 1040w, ${fourCardL} 2080w` }
+                        className = "project__image"
+                        src       = {fourCardM}
+                        sizes     = "100vw"
+                        alt       = "project screenshot"
+                    />
                 </div>
                 <a className="project__link" target="_blank" href='https://ayminahmedpk.github.io/display-fem-four_card/'> Live Website </a>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-four_card/'> Github Repository </a>
@@ -43,7 +61,13 @@ const ProjectsPage = () => {
             <div className="project">
                 <h3 className="project__name">FEM Calculator</h3>
                 <div className="project__image-container">
-                    <img className="project__image" src={calculatorImg} />
+                <img
+                        className = "project__image"
+                        src       = {calculatorM}
+                        srcSet    = { `${calculatorS} 520w, ${calculatorM} 1040w, ${calculatorL} 2080w` }
+                        sizes     = "100w"
+                        alt       = "project screenshot"
+                />
                 </div>
                 <a className="project__link" target="_blank" href='https://ayminahmedpk.github.io/display-fem-calculator_app/'> Live Website </a>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-calculator_app/'> Github Repository </a>
@@ -59,7 +83,13 @@ const ProjectsPage = () => {
             <div className="project">
                 <h3 className="project__name">Stamps Of Time</h3>
                 <div className="project__image-container">
-                    <img className="project__image" src={sot} />
+                <img
+                        className = "project__image"
+                        src       = {sotM}
+                        srcSet    = { `${sotS} 520w, ${sotM} 1040w, ${sotL} 2080w` }
+                        sizes     = "100vw"
+                        alt       = "project screenshot"
+                />
                 </div>
                 <a className="project__link" target="_blank" href='https://sot3.netlify.app'> Live Website </a>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display_sot'> Github Repository </a>
@@ -86,6 +116,8 @@ const ProjectsPage = () => {
             </div>
 
         </div>
+        </>
+
     );
 
 };

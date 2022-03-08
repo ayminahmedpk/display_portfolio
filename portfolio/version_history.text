@@ -1,4 +1,9 @@
 
+v1.3.0:
+    * Images ratio-ed properly, srcset utilized.
+    * Em breakpoints.
+    * Structurally implemented tab and beyond (4k+).
+
 
 v1.2.0:
     * Tamed SVGs (including description arrow)
