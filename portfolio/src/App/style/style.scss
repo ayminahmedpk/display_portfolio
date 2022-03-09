@@ -1,0 +1,11 @@
+@import 'config.scss';
+@import 'typography';
+@import 'layout';
+
+@import '../../Components/Header/Header';
+
+@import '../../Pages/HomePage/HomePage';
+@import '../../Pages/ProjectsPage/ProjectsPage';
+@import '../../Pages/ContactPage/ContactPage';
+
+@import 'responsiveness';

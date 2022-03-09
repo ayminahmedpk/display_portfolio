@@ -47,7 +47,7 @@ const ProjectsPage = () => {
                         alt       = "project screenshot"
                     />
                 </div>
-                <a className="project__link" target="_blank" href='https://ayminahmedpk.github.io/display-fem-four_card/'> Live Website </a>
+                <a className="project__link project__link-live" target="_blank" href='https://ayminahmedpk.github.io/display-fem-four_card/'> Live Website </a>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-four_card/'> Github Repository </a>
                 <a className="project__link" target="_blank" href='https://www.frontendmentor.io/solutions/figma-grid-areas-and-autofit-flex-and-auto-margins-bem-sass-mVn4Kes-9'> Compare site to design </a>
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
@@ -69,7 +69,7 @@ const ProjectsPage = () => {
                         alt       = "project screenshot"
                 />
                 </div>
-                <a className="project__link" target="_blank" href='https://ayminahmedpk.github.io/display-fem-calculator_app/'> Live Website </a>
+                <a className="project__link project__link-live" target="_blank" href='https://ayminahmedpk.github.io/display-fem-calculator_app/'> Live Website </a>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-calculator_app/'> Github Repository </a>
                 <a className="project__link" target="_blank" href='https://www.frontendmentor.io/solutions/sass-lists-for-themes-local-storage-custom-slider-oop-calculator-4zp1kBWp8'> Compare site to design </a>
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
@@ -91,7 +91,7 @@ const ProjectsPage = () => {
                         alt       = "project screenshot"
                 />
                 </div>
-                <a className="project__link" target="_blank" href='https://sot3.netlify.app'> Live Website </a>
+                <a className="project__link project__link-live" target="_blank" href='https://sot3.netlify.app'> Live Website </a>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display_sot'> Github Repository </a>
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
                     {arrowIcon}

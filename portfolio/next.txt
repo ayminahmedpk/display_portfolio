@@ -12,6 +12,14 @@ x Research into em based breakpoints
 
 x Implement tab and beyond structurally
 
-- Update content (finalize)
+x Conditionally render the contact form - do away with the 'hidden' class
 
-- Refactor css (modularize / finalize)
+x Aesthetic design
+
+x Modularize CSS
+
+x Update content (finalize)
+
+-> Refactor and finalize
+
+- Deploy

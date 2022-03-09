@@ -1,0 +1,38 @@
+// Screen: Laptops / Tablets (600px <= x < 1000px)
+@media screen and (min-width: 37.5em) {
+    html { font-size: 125%; }
+    
+    .content { padding: ($line-height-m*2); }
+    
+    .header__header-links { max-width: 200em; }
+    .header__link-icon { display: none;  }
+    .header__link-text { display: block; }
+    
+    p {
+        max-width    : 35em;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+}
+
+
+// So media query's em is based on mobile, but em inside media query are based
+// on the actual elements font-size at that time.
+
+// Screen: Small - Large monitors (800px <= x < 2000px)
+@media screen and (min-width: 50em) { // 800px
+    .header__header-links { max-width: 40em; }
+
+    .content {
+        max-width    : 40em;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+
+}
+
+
+// Screen: Extra large desktops (x >= 2000px)
+@media screen and (min-width: 125em) {
+    html { font-size: 1vw; }
+}

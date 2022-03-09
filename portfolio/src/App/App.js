@@ -15,10 +15,11 @@ import ProjectsPage from '../Pages/ProjectsPage/ProjectsPage.js' ;
 import ContactPage  from '../Pages/ContactPage/ContactPage.js'   ;
 
 // import Footer  from '../Components/Footer/Footer.js' ;
+
+
 import Header  from '../Components/Header/Header.js' ;
 
-
-import './style.scss';
+import './style/style.scss';
 
 
 const App = () => {

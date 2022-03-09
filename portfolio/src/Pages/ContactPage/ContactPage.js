@@ -4,8 +4,6 @@ import React, {useRef, useState} from 'react';
 
 import emailjs from '@emailjs/browser';
 
-
-
 const ContactPage = () => {
 
     const [ result         , setResult         ] = useState('');
@@ -18,11 +16,10 @@ const ContactPage = () => {
     
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs.sendForm('service_t0ast16', 'template_0oors83', form.current, emailjs_api_key)
             .then((result) => {
                 setResult('success');
-                setSuccessMessage('Thank you! Your mail has been successfully sent.');
+                setSuccessMessage('Your mail has been successfully sent.');
             },
             (error) => {
                 setResult('error');
@@ -32,30 +29,36 @@ const ContactPage = () => {
     };
 
 
+    const contactForm = (
+        <>
+        <h2 className='page-name'> Contact Me </h2>
+        {result=='error' ? <p className="error-message">Error: {errorMessage}</p> : '' }
+        <form ref={form} onSubmit={sendEmail} className='form'>
+            <input className="form__input" type="text"  placeholder="Name"    name="name"   />
+            <input className="form__input" type="email" placeholder="Email"   name="email"  />
+            <input className="form__input" type="text"  placeholder="Subject" name="subject"/>
+            <textarea className="form__textarea" placeholder="Your message" name="message"/>
+            <input className="form__send-button" type="submit" value="Send"/>    
+        </form>
+        </>
+    )
+
+
+    const successFeedback = (
+        <>
+        <h2 className='page-name'> Thank you! </h2>
+        <p className="success-message">{successMessage}</p>
+        </>
+    );
+
+
     return (
         <div className="content">
-
-            {result=='success' ? <p className="success-message">{successMessage}</p> : '' }
-
-            <h2 className={result=='success'? 'page-name hidden' : 'page-name'}>
-                Contact Me
-            </h2>
-
-            {result=='error' ? <p className="error-message">Error: {errorMessage}</p> : '' }
-
-            <form ref={form} onSubmit={sendEmail} className={`form${result=='success'? ' hidden' : ''}`}>
-
-                <input className="form__input" type="text"  placeholder="Name"    name="name"   />
-                <input className="form__input" type="email" placeholder="Email"   name="email"  />
-                <input className="form__input" type="text"  placeholder="Subject" name="subject"/>
-
-                <textarea className="form__textarea" placeholder="Your message" name="message"/>
-
-                <input className="form__send-button" type="submit" value="Send"/>
-
-            </form>
+            {result=='success' ? successFeedback : contactForm }
         </div>
+
     );
+
 };
 
 

@@ -1,0 +1,36 @@
+// Global
+// Screen: Mobile (x < 600px)
+#root {
+    display            : grid;
+    grid-template-rows : auto 1fr auto;
+    grid-template-areas:
+                            'h'
+                            'c'
+                            'f'
+    ;
+    .header  { grid-area: h ; }
+    .content { grid-area: c ; }
+    .footer  { grid-area: f ; }
+
+    position: relative;
+
+    min-width  : 18.75rem;  // 300px
+    min-height : 25rem;     // 400px
+    height     : 100%;
+
+    color : $color-black;
+}
+
+
+.content {
+    position: relative;
+
+    width   : 100%; // (for homepage with all children absolutely positioned)
+    padding : ($line-height-m*2) ($line-height-m);
+    
+    & > * {
+        // max-width    : 25em;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+}
