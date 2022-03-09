@@ -3,6 +3,10 @@
     text-align: center;
     outline: 1px solid black;
 
+    border-radius: 0.5em;
+    // border: 1px solid black;
+    overflow: hidden;
+
     & + & {
         margin-top: $line-height-m*2;
     }
@@ -12,6 +16,7 @@
 .project__name {
     padding: $line-height-m*0.5;
     box-shadow: inset 0px -1px black;
+    color: $color-black;
 }
 
 
@@ -86,7 +91,7 @@
 }
 
 
-.project__details { color: black;}
+// .project__details { color: black;}
 
 
 .accordion {

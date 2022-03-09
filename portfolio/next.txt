@@ -20,6 +20,8 @@ x Modularize CSS
 
 x Update content (finalize)
 
+-> Contact form - can't be empty
+
 -> Refactor and finalize
 
 - Deploy
