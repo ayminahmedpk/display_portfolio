@@ -30,12 +30,16 @@ x Contact form - can't be empty
 
 x Refactor and finalize
 
-- Deploy
+x Deploy
 
 
 
 (Future):
 
+- Improve Readme
+
 - Interactive design
   - Hover states on header
   - Modal / cursor: progress on Contact form
+
+- Grid or some other redesign for projects
