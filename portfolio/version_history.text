@@ -1,4 +1,9 @@
+v2.0.0
+    * Deployed (v1.6.0)
 
+v1.6.0
+    * Form validation for empty fields
+    * An improvements to colors (gave header a background)
 
 v1.5.0:
     * Aligned project details
