@@ -1,4 +1,10 @@
 
+
+v1.5.0:
+    * Aligned project details
+    * Finalized colors (reduced excessive usage)
+    * Consistency with link colors (all text white bg - except live site)
+
 v1.4.0:
     * Fixed implementation issue with CTA position
     * Some aesthetic implementation
@@ -7,7 +13,7 @@ v1.4.0:
 v1.3.0:
     * Images ratio-ed properly, srcset utilized.
     * Em breakpoints.
-    * Structurally implemented tab and beyond (4k+).
+    * Structurally implemented tab and beyond (4k+)
 
 
 v1.2.0:
@@ -17,4 +23,4 @@ v1.2.0:
 
 v1.1.1:
 
-    * Completed structural mobile redesign for all 4 pages.
+    * Completed structural mobile redesign for all 4 pages

@@ -24,7 +24,7 @@
         flex   : 1                ;
         height : $line-height-m*2 ;
 
-        color            : $color-black ;
+        color            : $color-blue ;
         // background-color : $color-black ;
         text-decoration  : none         ; 
 }
@@ -39,7 +39,7 @@
     width  : $line-height-m;
     height : $line-height-m;
     fill   : none;
-    stroke : $color-black;
+    stroke : $color-blue;
     
     &.icon-home     { stroke-width: 10px  ; }
     &.icon-about    { stroke-width: 18px  ; }

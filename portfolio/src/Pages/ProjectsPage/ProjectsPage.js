@@ -53,8 +53,12 @@ const ProjectsPage = () => {
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
                     {arrowIcon}
                     <p className="project__details-label">Details</p>
-                    <p className="project__details"> <strong>Description:</strong> Custom solution for a Front-End Mentor challenge. </p>
-                    <p className="project__details"> <strong>Highlights:</strong> Mobile-first development, Grid, Flexbox, BEM. </p>
+                    <div className="project__details">
+                        <strong>Description:</strong>
+                        <p>Custom solution for a Front-End Mentor challenge.</p>
+                        <strong>Highlights:</strong>
+                        <p>Mobile-first development, Grid, Flexbox, BEM.</p>
+                    </div>
                 </div>
             </div>
 
@@ -75,8 +79,12 @@ const ProjectsPage = () => {
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
                     {arrowIcon}
                     <p className="project__details-label">Details</p>
-                    <p className="project__details"> <strong>Description:</strong> Custom solution for a Front-End Mentor challenge. </p>
-                    <p className="project__details"> <strong>Highlights:</strong> State design pattern, event delegation pattern, local storage, SASS lists, theme-switcher, customized slider. </p>
+                    <div className="project__details">
+                        <strong>Description:</strong>
+                        <p>Custom solution for a Front-End Mentor challenge.</p>
+                        <strong>Highlights:</strong>
+                        <p>State design pattern, event delegation pattern, local storage, SASS lists, theme-switcher, customized slider.</p>
+                    </div>
                 </div>
             </div>
 
@@ -96,8 +104,12 @@ const ProjectsPage = () => {
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
                     {arrowIcon}
                     <p className="project__details-label">Details</p>
-                    <p className="project__details"> <strong>Description:</strong> A tool for generating and posting timestamps as YouTube comments. </p>
-                    <p className="project__details"> <strong>Highlights:</strong> React, Redux, Routing, Google OAuth (direct endpoints - no library), YouTube Data API v3 (search, posting comments), container/component architecture, custom hooks. </p>
+                    <div className="project__details">
+                        <strong>Description:</strong>
+                        <p>A tool for generating and posting timestamps as YouTube comments.</p>
+                        <strong>Highlights:</strong>
+                        <p>React, Redux, Routing, Google OAuth (direct endpoints - no library), YouTube Data API v3 (search, posting comments), container/component architecture, custom hooks.</p>
+                    </div>
                 </div>
             </div>
 
@@ -110,8 +122,12 @@ const ProjectsPage = () => {
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
                     {arrowIcon}
                     <p className="project__details-label">Details</p>
-                    <p className="project__details"> <strong>Description:</strong> A very minimalistic portfolio. </p>
-                    <p className="project__details"> <strong>Highlights:</strong> React, Routing, Tiny Tweaks.</p>
+                    <div className="project__details">
+                        <strong>Description:</strong>
+                        <p>A very minimalistic portfolio.</p>
+                        <strong>Highlights:</strong>
+                        <p>React, Routing, Tiny Tweaks.</p>
+                    </div>
                 </div>
             </div>
 
