@@ -14,7 +14,9 @@ import sotS           from '../../resources/images/projects/sot/sot-small.png';
 import sotM           from '../../resources/images/projects/sot/sot-medium.png';
 import sotL           from '../../resources/images/projects/sot/sot-large.png';
 
-import portfolio     from '../../resources/images/projects/portfolio/portfolio.png';
+import portfolioS     from '../../resources/images/projects/portfolio/portfolio-small.png';
+import portfolioM     from '../../resources/images/projects/portfolio/portfolio-medium.png';
+// import portfolioL     from '../../resources/images/projects/portfolio/portfolio-large.png';
 
 
 const ProjectsPage = () => {
@@ -40,9 +42,9 @@ const ProjectsPage = () => {
                 <h3 className="project__name">FEM Four Card Landing Section</h3>
                 <div className="project__image-container">
                     <img
-                        srcSet    = {`${fourCardS} 520w, ${fourCardM} 1040w, ${fourCardL} 2080w` }
                         className = "project__image"
                         src       = {fourCardM}
+                        srcSet    = {`${fourCardS} 520w, ${fourCardM} 1040w, ${fourCardL} 2080w` }
                         sizes     = "100vw"
                         alt       = "project screenshot"
                     />
@@ -116,7 +118,13 @@ const ProjectsPage = () => {
             <div className="project">
                 <h3 className="project__name">This Portfolio</h3>
                 <div className="project__image-container">
-                    <img className="project__image" src={portfolio} />
+                    <img
+                        className = "project__image"
+                        src       = {portfolioS}
+                        srcSet    = {`${portfolioS} 800w, ${portfolioM} 1040w`}
+                        sizes     = "100vw"
+                        alt       = "project screenshot"
+                    />
                 </div>
                 <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display_portfolio'> Github Repository </a>
                 <div className="project__details-container accordion" onClick={descriptionHandler}>

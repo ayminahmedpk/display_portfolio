@@ -2,7 +2,7 @@
     display         : flex;
     justify-content : center;
     
-    // background-color : $color-grey;
+    background-color : $color-grey;
 }
 
 
@@ -24,9 +24,8 @@
         flex   : 1                ;
         height : $line-height-m*2 ;
 
-        color            : $color-blue ;
-        // background-color : $color-black ;
-        text-decoration  : none         ; 
+        color           : $color-white ;
+        text-decoration : none         ;
 }
 
 
@@ -39,7 +38,7 @@
     width  : $line-height-m;
     height : $line-height-m;
     fill   : none;
-    stroke : $color-blue;
+    stroke : $color-white;
     
     &.icon-home     { stroke-width: 10px  ; }
     &.icon-about    { stroke-width: 18px  ; }
@@ -57,10 +56,10 @@
 
 
 .header__header-link.active {
-    color            : $color-white;
+    // color            : $color-white;
     background-color : $color-blue;
 
-    & .header__link-icon { stroke: $color-white; }
+    // & .header__link-icon { stroke: $color-white; }
 }
 
 

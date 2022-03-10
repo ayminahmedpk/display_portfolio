@@ -24,10 +24,18 @@ x Align project details
 
 x Finalize aesthetic design
 
--> Final screenshot
+x Final screenshot
 
--> Contact form - can't be empty
+x Contact form - can't be empty
 
-- Refactor and finalize
+x Refactor and finalize
 
 - Deploy
+
+
+
+(Future):
+
+- Interactive design
+  - Hover states on header
+  - Modal / cursor: progress on Contact form

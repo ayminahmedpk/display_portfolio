@@ -16,6 +16,18 @@ const ContactPage = () => {
     
     const sendEmail = (e) => {
         e.preventDefault();
+
+        const hasEmptyFields = () => {
+            const fields = form.current.querySelectorAll('input, textarea');
+            return ([...fields].some(field => field.value == ''));
+        }
+
+        if ( hasEmptyFields() ) {
+            setErrorMessage("Fields should not be empty.");
+            setResult("error");
+            return;
+        }
+
         emailjs.sendForm('service_t0ast16', 'template_0oors83', form.current, emailjs_api_key)
             .then((result) => {
                 setResult('success');
