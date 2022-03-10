@@ -32,9 +32,13 @@ x Refactor and finalize
 
 x Deploy
 
+x Important bugfix with grid - details alignment abandoned for now
+
 
 
 (Future):
+
+- Do alignment of details properly, and test it well this time
 
 - Improve Readme
 
@@ -42,4 +46,10 @@ x Deploy
   - Hover states on header
   - Modal / cursor: progress on Contact form
 
+- Labels for the form feilds to avoid placeholder issues
+
 - Grid or some other redesign for projects
+  - Ideas to consider:
+    - Scrollspy
+    - Grid like four card
+    - Vertical (m) vs Horizontal (d) cards

@@ -93,20 +93,25 @@
                 translateY(50%);
 }
 
-
-.project__details {
-    display               : grid;
-    grid-template-columns : $line-height-m*4 1fr;
-    grid-auto-rows        : auto;
-    gap                   : $line-height-m*0.5;
-
-    margin-top : $line-height-m*0.5;
-    
-    color      : black;
-    text-align : left;
-
-    p { width: 100%; }
+.project__details-text {
+    color: $color-black;
+    text-align: left;
 }
+
+// Reimplement later - and better
+// .project__details {
+//     display               : grid;
+//     grid-template-columns : $line-height-m*4 1fr;
+//     grid-auto-rows        : auto;
+//     gap                   : $line-height-m*0.5;
+
+//     margin-top : $line-height-m*0.5;
+    
+//     color      : black;
+//     text-align : left;
+
+//     p { width: 100%; }
+// }
 
 
 .accordion {
