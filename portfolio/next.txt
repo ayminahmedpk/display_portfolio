@@ -20,8 +20,14 @@ x Modularize CSS
 
 x Update content (finalize)
 
+x Align project details
+
+x Finalize aesthetic design
+
+-> Final screenshot
+
 -> Contact form - can't be empty
 
--> Refactor and finalize
+- Refactor and finalize
 
 - Deploy
