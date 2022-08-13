@@ -1,5 +1,9 @@
 
 
+2.1.1:
+  - Cleaned readme.md
+
+
 2.1.0:
   - Added REST Countries to projects
   - Removed SOT from projects
