@@ -38,6 +38,10 @@ x Important bugfix with grid - details alignment abandoned for now
 
 (Future):
 
+- Remove "Create React App" details
+
+- Add Icon ( AA )
+
 - Do alignment of details properly, and test it well this time
 
 - Improve Readme

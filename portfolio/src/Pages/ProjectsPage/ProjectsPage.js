@@ -2,20 +2,20 @@
 
 import React from 'react';
 
-import fourCardS   from '../../resources/images/projects/four-card/four-card-small.png';
-import fourCardM   from '../../resources/images/projects/four-card/four-card-medium.png';
-import fourCardL   from '../../resources/images/projects/four-card/four-card-large.png';
+import fourCardS from '../../resources/images/projects/four-card/four-card-small.png';
+import fourCardM from '../../resources/images/projects/four-card/four-card-medium.png';
+import fourCardL from '../../resources/images/projects/four-card/four-card-large.png';
 
 import calculatorS from '../../resources/images/projects/calculator/calculator-small.png';
 import calculatorM from '../../resources/images/projects/calculator/calculator-medium.png';
 import calculatorL from '../../resources/images/projects/calculator/calculator-large.png';
 
-import sotS           from '../../resources/images/projects/sot/sot-small.png';
-import sotM           from '../../resources/images/projects/sot/sot-medium.png';
-import sotL           from '../../resources/images/projects/sot/sot-large.png';
+import restConS from '../../resources/images/projects/rest-countries/rest_countries-small.jpg';
+import restConM from '../../resources/images/projects/rest-countries/rest_countries-medium.jpg';
+import restConL from '../../resources/images/projects/rest-countries/rest_countries-large.png';
 
-import portfolioS     from '../../resources/images/projects/portfolio/portfolio-small.png';
-import portfolioM     from '../../resources/images/projects/portfolio/portfolio-medium.png';
+import portfolioS from '../../resources/images/projects/portfolio/portfolio-small.png';
+import portfolioM from '../../resources/images/projects/portfolio/portfolio-medium.png';
 // import portfolioL     from '../../resources/images/projects/portfolio/portfolio-large.png';
 
 
@@ -83,23 +83,23 @@ const ProjectsPage = () => {
             </div>
 
             <div className="project">
-                <h3 className="project__name">Stamps Of Time</h3>
+                <h3 className="project__name">REST Countries</h3>
                 <div className="project__image-container">
                 <img
                         className = "project__image"
-                        src       = {sotM}
-                        srcSet    = { `${sotS} 520w, ${sotM} 1040w, ${sotL} 2080w` }
+                        src       = {restConM}
+                        srcSet    = { `${restConS} 520w, ${restConM} 1040w, ${restConL} 2080w` }
                         sizes     = "100vw"
                         alt       = "project screenshot"
                 />
                 </div>
-                <a className="project__link project__link-live" target="_blank" href='https://sot3.netlify.app'> Live Website </a>
-                <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display_sot'> Github Repository </a>
+                <a className="project__link project__link-live" target="_blank" href='https://restcon.netlify.app/'> Live Website </a>
+                <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-rest_countries'> Github Repository </a>
                 <div className="project__details-container accordion" onClick={descriptionHandler}>
                     {arrowIcon}
                     <p className="project__details-label">Details</p>
-                    <p className="project__details-text"><strong>Description: </strong>A tool for generating and posting timestamps as YouTube comments.</p>
-                    <p className="project__details-text"><strong>Highlights: </strong>React, Redux, Routing, Google OAuth (direct endpoints - no library), YouTube Data API v3 (search, posting comments), container/component architecture, custom hooks.</p>
+                    <p className="project__details-text"><strong>Description:</strong> Custom solution for a Front-End Mentor challenge.</p>
+                    <p className="project__details-text"><strong>Highlights:</strong> TypeScript, React (classes), Redux (old syntax), Thunk, Axios. Testing done using Jest + RTL (React Testing Library). API call mocked via MSW (Mock Service Worker).</p>
                 </div>
             </div>
 
