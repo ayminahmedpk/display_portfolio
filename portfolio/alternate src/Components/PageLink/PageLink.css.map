@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,OAAO,EAAW,IAAI;EACtB,eAAe,EAAG,MAAM;EACxB,WAAW,EAAO,MAAM;EAExB,KAAK,EAAI,IAAI;EAEb,MAAM,EAAE,OAAO;CAalB;;AApBD,AASI,UATM,AASL,MAAM,CAAC;EACJ,eAAe,EAAG,SAAS;CAC9B;;AAXL,AAaI,UAbM,AAaL,uBAAuB,CAAC;EAGrB,gBAAgB,EAAG,OAAO;EAC1B,eAAe,EAAI,SAAS;CAE/B",
+    "sources": [
+        "PageLink.scss"
+    ],
+    "names": [],
+    "file": "PageLink.css"
+}

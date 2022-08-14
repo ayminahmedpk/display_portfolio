@@ -1,0 +1,20 @@
+.carousel--page-1 {
+  -webkit-transform: translateX(calc(-100% * 0));
+          transform: translateX(calc(-100% * 0));
+}
+
+.carousel--page-2 {
+  -webkit-transform: translateX(calc(-100% * 1));
+          transform: translateX(calc(-100% * 1));
+}
+
+.carousel--page-3 {
+  -webkit-transform: translateX(calc(-100% * 2));
+          transform: translateX(calc(-100% * 2));
+}
+
+.carousel--page-4 {
+  -webkit-transform: translateX(calc(-100% * 3));
+          transform: translateX(calc(-100% * 3));
+}
+/*# sourceMappingURL=useCarousel.css.map */

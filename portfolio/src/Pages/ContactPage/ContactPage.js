@@ -4,11 +4,13 @@ import React, {useRef, useState} from 'react';
 
 import emailjs from '@emailjs/browser';
 
+
 const ContactPage = () => {
 
-    const [ result         , setResult         ] = useState('');
-    const [ successMessage , setSuccessMessage ] = useState('')
-    const [ errorMessage   , setErrorMessage   ] = useState('');
+    const [ result         , setResult         ] = useState('')   ;
+    const [ successMessage , setSuccessMessage ] = useState('')   ;
+    const [ errorMessage   , setErrorMessage   ] = useState('')   ;
+    const [ isLoading      , setLoading        ] = useState(false);
 
     const emailjs_api_key = process.env.REACT_APP_EMAILJS_API_KEY;
 
@@ -28,29 +30,49 @@ const ContactPage = () => {
             return;
         }
 
+        setLoading(true);
         emailjs.sendForm('service_t0ast16', 'template_0oors83', form.current, emailjs_api_key)
             .then((result) => {
                 setResult('success');
                 setSuccessMessage('Your mail has been successfully sent.');
+                setLoading(false);
             },
             (error) => {
                 setResult('error');
                 setErrorMessage(error.text);
+                setLoading(false);
             }
         );
     };
+
+    const sendButtonValue = isLoading? 'Sending...' : 'Send';
+    const formClass = isLoading? 'form form--loading' : 'form';
+
+    // const sendButtonValue = 'Send'
 
 
     const contactForm = (
         <>
         <h2 className='page-name'> Contact Me </h2>
         {result=='error' ? <p className="error-message">Error: {errorMessage}</p> : '' }
-        <form ref={form} onSubmit={sendEmail} className='form'>
-            <input className="form__input" type="text"  placeholder="Name"    name="name"   />
-            <input className="form__input" type="email" placeholder="Email"   name="email"  />
-            <input className="form__input" type="text"  placeholder="Subject" name="subject"/>
-            <textarea className="form__textarea" placeholder="Your message" name="message"/>
-            <input className="form__send-button" type="submit" value="Send"/>    
+        <form ref={form} onSubmit={sendEmail} className={formClass}>
+            <div className="form__field">
+                <span className='form__label'><strong>Name</strong></span>
+                <input className="form__input" type="text" name="name"   />
+            </div>
+            <div className="form__field">
+                <span className='form__label'><strong>Email</strong></span>
+                <input className="form__input" type="email" name="email"  />
+            </div>
+            <div className="form__field">
+                <span className='form__label'><strong>Subject</strong></span>
+                <input className="form__input" type="text" name="subject"/>
+            </div>
+            <div className="form__field">
+                <span className='form__label'><strong>Message</strong></span>
+                <textarea className="form__textarea" name="message"/>
+            </div>
+            <input className="form__send-button" type="submit" value={sendButtonValue}/>
         </form>
         </>
     )

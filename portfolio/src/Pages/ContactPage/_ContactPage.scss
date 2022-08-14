@@ -1,3 +1,29 @@
+
+
+.form__field {
+    display     : flex;
+    align-items : center;
+
+    & + & {
+        margin-top: $line-height-m;
+    }
+}
+
+.form__label {
+    // padding-right: $line-height-m*0.25;
+    // margin-top : $line-height-m;
+    width: 7rem;
+
+    text-align: center;
+}
+
+.form--loading {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.33;
+}
+
+
 .form__input,
 .form__textarea {
     display    : block;
@@ -6,16 +32,12 @@
     width         : 100%              ;
     height        : $line-height-m*2  ;
     padding       : 0 $line-height-m  ;
-    margin-top    : $line-height-m    ;
-    border: none;
+    border        : none              ;
     outline       : 1px solid black ;
     border-radius : 1em               ;
-    // box-shadow    :  1px  1px black ,
-    //                 -1px -1px black ;
 
     font-family : inherit ;
     font-size   : inherit ;
-    text-align  : center  ;
 
     &:focus {
         outline: 1px solid $color-blue;
@@ -25,21 +47,12 @@
 }
 
 .form__textarea {
-    position: relative;
-
     height  : $line-height-m*4 ;
     padding : $line-height-m   ;
     
     text-align: left;
     
     resize: none;
-    
-    &::placeholder {
-        position : absolute;
-        top      : 50%;
-        left     : 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 
 

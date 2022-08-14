@@ -1,5 +1,11 @@
 
 
+2.3.0:
+  - Loading state configured
+  - Placeholders Removed
+  - Labels added to contact page
+
+
 2.2.0:
   - Projects rearranged, tinkered
   - Skills added
