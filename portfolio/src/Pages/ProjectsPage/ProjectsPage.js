@@ -39,6 +39,49 @@ const ProjectsPage = () => {
             <h2 className="page-name">My Projects</h2>
             
             <div className="project">
+                <h3 className="project__name">REST Countries</h3>
+                <div className="project__image-container">
+                <img
+                        className = "project__image"
+                        src       = {restConM}
+                        srcSet    = { `${restConS} 520w, ${restConM} 1040w, ${restConL} 2080w` }
+                        sizes     = "100vw"
+                        alt       = "project screenshot"
+                />
+                </div>
+                <a className="project__link project__link-live" target="_blank" href='https://restcon.netlify.app/'> Live Website </a>
+                <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-rest_countries'> Github Repository </a>
+                <div className="project__details-container accordion" onClick={descriptionHandler}>
+                    {arrowIcon}
+                    <p className="project__details-label">Details</p>
+                    <p className="project__details-text"><strong>Description:</strong> Custom solution for a Front-End Mentor challenge.</p>
+                    <p className="project__details-text"><strong>Highlights:</strong> TypeScript, React (classes), Redux (old syntax), Thunk, Routing, Axios. Testing done using Jest + RTL (React Testing Library). API call mocked via MSW (Mock Service Worker).</p>
+                </div>
+            </div>
+
+            <div className="project">
+                <h3 className="project__name">FEM Calculator</h3>
+                <div className="project__image-container">
+                <img
+                        className = "project__image"
+                        src       = {calculatorM}
+                        srcSet    = { `${calculatorS} 520w, ${calculatorM} 1040w, ${calculatorL} 2080w` }
+                        sizes     = "100w"
+                        alt       = "project screenshot"
+                />
+                </div>
+                <a className="project__link project__link-live" target="_blank" href='https://ayminahmedpk.github.io/display-fem-calculator_app/'> Live Website </a>
+                <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-calculator_app/'> Github Repository </a>
+                <a className="project__link" target="_blank" href='https://www.frontendmentor.io/solutions/sass-lists-for-themes-local-storage-custom-slider-oop-calculator-4zp1kBWp8'> Compare site to design </a>
+                <div className="project__details-container accordion" onClick={descriptionHandler}>
+                    {arrowIcon}
+                    <p className="project__details-label">Details</p>
+                    <p className="project__details-text"><strong>Description:</strong> Custom solution for a Front-End Mentor challenge.</p>
+                    <p className="project__details-text"><strong>Highlights:</strong> Plain JavaScript, state design pattern, event delegation pattern, local storage, SASS lists, theme-switcher, customized slider.</p>
+                </div>
+            </div>
+
+            <div className="project">
                 <h3 className="project__name">FEM Four Card Landing Section</h3>
                 <div className="project__image-container">
                     <img
@@ -61,49 +104,6 @@ const ProjectsPage = () => {
             </div>
 
             <div className="project">
-                <h3 className="project__name">FEM Calculator</h3>
-                <div className="project__image-container">
-                <img
-                        className = "project__image"
-                        src       = {calculatorM}
-                        srcSet    = { `${calculatorS} 520w, ${calculatorM} 1040w, ${calculatorL} 2080w` }
-                        sizes     = "100w"
-                        alt       = "project screenshot"
-                />
-                </div>
-                <a className="project__link project__link-live" target="_blank" href='https://ayminahmedpk.github.io/display-fem-calculator_app/'> Live Website </a>
-                <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-calculator_app/'> Github Repository </a>
-                <a className="project__link" target="_blank" href='https://www.frontendmentor.io/solutions/sass-lists-for-themes-local-storage-custom-slider-oop-calculator-4zp1kBWp8'> Compare site to design </a>
-                <div className="project__details-container accordion" onClick={descriptionHandler}>
-                    {arrowIcon}
-                    <p className="project__details-label">Details</p>
-                    <p className="project__details-text"><strong>Description:</strong> Custom solution for a Front-End Mentor challenge.</p>
-                    <p className="project__details-text"><strong>Highlights:</strong> State design pattern, event delegation pattern, local storage, SASS lists, theme-switcher, customized slider.</p>
-                </div>
-            </div>
-
-            <div className="project">
-                <h3 className="project__name">REST Countries</h3>
-                <div className="project__image-container">
-                <img
-                        className = "project__image"
-                        src       = {restConM}
-                        srcSet    = { `${restConS} 520w, ${restConM} 1040w, ${restConL} 2080w` }
-                        sizes     = "100vw"
-                        alt       = "project screenshot"
-                />
-                </div>
-                <a className="project__link project__link-live" target="_blank" href='https://restcon.netlify.app/'> Live Website </a>
-                <a className="project__link" target="_blank" href='https://github.com/ayminahmedpk/display-fem-rest_countries'> Github Repository </a>
-                <div className="project__details-container accordion" onClick={descriptionHandler}>
-                    {arrowIcon}
-                    <p className="project__details-label">Details</p>
-                    <p className="project__details-text"><strong>Description:</strong> Custom solution for a Front-End Mentor challenge.</p>
-                    <p className="project__details-text"><strong>Highlights:</strong> TypeScript, React (classes), Redux (old syntax), Thunk, Axios. Testing done using Jest + RTL (React Testing Library). API call mocked via MSW (Mock Service Worker).</p>
-                </div>
-            </div>
-
-            <div className="project">
                 <h3 className="project__name">This Portfolio</h3>
                 <div className="project__image-container">
                     <img
@@ -119,7 +119,7 @@ const ProjectsPage = () => {
                     {arrowIcon}
                     <p className="project__details-label">Details</p>
                     <p className="project__details-text"><strong>Description: </strong>A very minimalistic portfolio.</p>
-                    <p className="project__details-text"><strong>Highlights: </strong>React, Routing, Tiny Tweaks.</p>
+                    <p className="project__details-text"><strong>Highlights: </strong>JavaScript, React (functions / hooks), Routing, Tiny Tweaks.</p>
                 </div>
             </div>
 

@@ -1,3 +1,3 @@
 
 
-A simple porfolio webiste.
+A simple porfolio website.
