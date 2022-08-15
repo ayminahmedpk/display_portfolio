@@ -45,8 +45,8 @@ const ContactPage = () => {
         );
     };
 
-    const sendButtonValue = isLoading? 'Sending...' : 'Send';
-    const formClass = isLoading? 'form form--loading' : 'form';
+    const sendButtonValue = isLoading ? 'Sending...' : 'Send';
+    const formClass = 'form' + (isLoading ? ' form--loading' : '')
 
     // const sendButtonValue = 'Send'
 
