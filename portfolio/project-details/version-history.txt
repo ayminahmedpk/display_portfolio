@@ -1,4 +1,7 @@
 
+2.3.3:
+  - Added design files to project-details folder
+
 
 2.3.2:
   - Minor improvements to contact page
